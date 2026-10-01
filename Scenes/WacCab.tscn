@@ -12,6 +12,7 @@
 [ext_resource type="ArrayMesh" uid="uid://by8ymvk6hun0s" path="res://Resource/light.tres" id="7_relac"]
 [ext_resource type="ArrayMesh" uid="uid://k8hywl7raaaa" path="res://Resource/ringcollider.tres" id="8_3pflq"]
 [ext_resource type="Script" uid="uid://dwc58anpatgs6" path="res://Scripts/HitboxManager.gd" id="8_jnvdn"]
+[ext_resource type="Texture2D" uid="uid://b4sa47xvje6do" path="res://icon.svg" id="13_a7p14"]
 [ext_resource type="Texture2D" uid="uid://cqobwflrgd5p2" path="res://Tex/preview.png" id="14_a7p14"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_relac"]
@@ -7857,9 +7858,9 @@ shader_parameter/roughness = 0.0
 shader_parameter/metallic_texture_channel = Vector4(0, 0, 0, 0)
 shader_parameter/specular = 0.0
 shader_parameter/metallic = 0.0
-shader_parameter/texture_emission = ExtResource("14_a7p14")
+shader_parameter/texture_emission = ExtResource("13_a7p14")
 shader_parameter/emission = Color(1, 1, 1, 1)
-shader_parameter/emission_energy = 4.99999988824
+shader_parameter/emission_energy = 2.999999932944
 shader_parameter/uv1_scale = Vector3(1, 1, 1)
 shader_parameter/uv1_offset = Vector3(0, 0.045, 0)
 shader_parameter/uv2_scale = Vector3(1, 1, 1)
@@ -10309,25 +10310,21 @@ mesh = SubResource("ArrayMesh_vh142")
 
 [node name="Light1" type="OmniLight3D" parent="." unique_id=693233088]
 transform = Transform3D(-1, 1.565573e-08, 1.4585075e-07, -2.2626677e-08, 0.9659258, -0.25881907, -1.44933e-07, -0.25881907, -0.9659258, -0.15460739, 1.5162094, 0.5242896)
-visible = false
 light_color = Color(0.53512573, 0.00022977621, 0.5430569, 1)
 light_energy = 0.2
 
 [node name="Light2" type="OmniLight3D" parent="." unique_id=554691569]
 transform = Transform3D(-1, 1.565573e-08, 1.4585075e-07, -2.2626677e-08, 0.9659258, -0.25881907, -1.44933e-07, -0.25881907, -0.9659258, 0.11544067, 1.5162094, 0.52428955)
-visible = false
 light_color = Color(0.53512573, 0.00022977621, 0.5430569, 1)
 light_energy = 0.2
 
 [node name="Light3" type="OmniLight3D" parent="." unique_id=2038408736]
 transform = Transform3D(-1, 1.565573e-08, 1.4585075e-07, -2.2626677e-08, 0.9659258, -0.25881907, -1.44933e-07, -0.25881907, -0.9659258, 0.11544067, 1.2584289, 0.56989807)
-visible = false
 light_color = Color(0.53512573, 0.00022977621, 0.5430569, 1)
 light_energy = 0.2
 
 [node name="Light4" type="OmniLight3D" parent="." unique_id=1994715460]
 transform = Transform3D(-1, 1.5655733e-08, 1.4585075e-07, -2.2626677e-08, 0.9659258, -0.25881907, -1.44933e-07, -0.25881907, -0.9659258, -0.15529227, 1.2584289, 0.56989807)
-visible = false
 light_color = Color(0.53512573, 0.00022977621, 0.5430569, 1)
 light_energy = 0.2
 
@@ -10345,15 +10342,18 @@ metadata/_edit_use_anchors_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1032693495]
 transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, -0.69094086, 1, 1)
+visible = false
 mesh = SubResource("PlaneMesh_5x2ve")
 surface_material_override/0 = SubResource("StandardMaterial3D_mmmqd")
 
 [node name="Depth" type="Label3D" parent="." unique_id=1453082195]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6086798, 0.9369583, 0)
+visible = false
 text = "EEE"
 
 [node name="Radius" type="Label3D" parent="." unique_id=1090863311]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6086798, 0.7404715, 0)
+visible = false
 text = "EEE"
 
 [connection signal="body_entered" from="Buttons/aimme/CardTrigger" to="." method="_on_card_trigger_body_entered"]
