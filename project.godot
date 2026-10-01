@@ -1,0 +1,50 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="WaCadeXR"
+run/main_scene="uid://dn4hnjqmrhtji"
+config/features=PackedStringArray("4.7", "C#", "Forward Plus")
+run/max_fps=90
+config/icon="res://icon.svg"
+
+[autoload]
+
+IPCManager="*uid://dfib30eepmg7c"
+GlobalSignal="*uid://5cd8qlg0llef"
+KeyManager="*uid://dfpnb4vjys3o4"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+
+[dotnet]
+
+project/assembly_name="WACVR_Godot"
+
+[filesystem]
+
+import/blender/enabled=false
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"
+renderer/rendering_method="gl_compatibility"
+
+[xr]
+
+openxr/enabled=true
+shaders/enabled=true

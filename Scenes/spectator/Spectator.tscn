@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://dn4hnjqmrhtji"]
+
+[ext_resource type="Script" uid="uid://b4862lq0twdg6" path="res://Scenes/spectator/spec_cam.gd" id="1_tll3d"]
+[ext_resource type="PackedScene" uid="uid://c2vjqdxelfsfn" path="res://Scenes/Arcade.tscn" id="2_gqojk"]
+
+[node name="Spectator" type="Control" unique_id=41876772]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=99604541]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="TextureRect" unique_id=816953759]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="SubViewport" type="SubViewport" parent="TextureRect/SubViewportContainer" unique_id=1895743573]
+handle_input_locally = false
+size = Vector2i(1920, 1080)
+render_target_update_mode = 4
+
+[node name="SpecCam" type="Camera3D" parent="TextureRect/SubViewportContainer/SubViewport" unique_id=1808358045 node_paths=PackedStringArray("head_cam")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3861201, 0)
+script = ExtResource("1_tll3d")
+head_cam = NodePath("../../../../HMD/Node3D/Player/XRCamera3D")
+
+[node name="HMD" type="SubViewport" parent="." unique_id=67144292]
+
+[node name="Node3D" parent="HMD" unique_id=287221010 instance=ExtResource("2_gqojk")]
+
+[editable path="HMD/Node3D"]
+[editable path="HMD/Node3D/Player"]

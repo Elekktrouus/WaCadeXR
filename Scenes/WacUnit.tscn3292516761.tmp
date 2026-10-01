@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://imenqg8kqtvw"]
+
+[ext_resource type="PackedScene" uid="uid://de6ao4duq50ow" path="res://Model/WacUnity.fbx" id="1_sgale"]
+[ext_resource type="Script" uid="uid://c4t5q1wdt3668" path="res://Scenes/wac_unit.gd" id="2_xmun6"]
+[ext_resource type="Shader" uid="uid://h4mtsl2dle2j" path="res://Scenes/LCDShader.gdshader" id="3_j8bws"]
+[ext_resource type="Texture2D" uid="uid://b4sa47xvje6do" path="res://icon.svg" id="4_0c8u7"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0c8u7"]
+render_priority = 0
+shader = ExtResource("3_j8bws")
+shader_parameter/albedo = Color(0, 0, 0, 1)
+shader_parameter/texture_albedo = ExtResource("4_0c8u7")
+shader_parameter/point_size = 0.0
+shader_parameter/roughness = 0.0
+shader_parameter/metallic_texture_channel = Vector4(0, 0, 0, 0)
+shader_parameter/specular = 0.0
+shader_parameter/metallic = 0.0
+shader_parameter/texture_emission = ExtResource("4_0c8u7")
+shader_parameter/emission = Color(1, 1, 1, 1)
+shader_parameter/emission_energy = 4.99999988824
+shader_parameter/uv1_scale = Vector3(1, 1, 1)
+shader_parameter/uv1_offset = Vector3(0, -0.08, 0)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xmun6"]
+
+[sub_resource type="Sky" id="Sky_j8bws"]
+sky_material = SubResource("ProceduralSkyMaterial_xmun6")
+
+[sub_resource type="Environment" id="Environment_0c8u7"]
+background_mode = 2
+background_energy_multiplier = 1.82
+sky = SubResource("Sky_j8bws")
+ssao_enabled = true
+sdfgi_enabled = true
+glow_enabled = true
+
+[node name="WacUnity" unique_id=2104240505 instance=ExtResource("1_sgale")]
+script = ExtResource("2_xmun6")
+
+[node name="Ring" parent="Body" parent_id_path=PackedInt32Array(677559247) index="0" unique_id=1780419748]
+visible = false
+
+[node name="Lights" parent="Body/Ring" index="0" unique_id=2078876061]
+visible = false
+
+[node name="Touch Hitbox" parent="Body/Ring" index="1" unique_id=332120216]
+visible = false
+
+[node name="ButtonCoversExtend" parent="Body/Ring" index="3" unique_id=881553808]
+visible = false
+
+[node name="Screen" parent="Body" parent_id_path=PackedInt32Array(677559247) index="1" unique_id=1158574586]
+transform = Transform3D(1.0000005, 0, 0, 0, 0.9659264, -0.25881907, 0, -0.25881907, -0.9659264, 0, 0.00089274714, 0.01300398)
+surface_material_override/0 = SubResource("ShaderMaterial_0c8u7")
+
+[node name="WindowCapture" type="WindowCapture" parent="Body/Screen" index="0" unique_id=611052989]
+
+[node name="Camera3D" type="Camera3D" parent="." index="2" unique_id=1956305309]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2185365, 0.9404206)
+fov = 41.960743
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="3" unique_id=2023217601]
+environment = SubResource("Environment_0c8u7")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." index="4" unique_id=998961056]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.227864, -0.024108946)
+light_color = Color(0.7823288, 0.67472905, 0.5655135, 1)
+light_energy = 0.407
