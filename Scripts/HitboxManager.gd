@@ -9,8 +9,3 @@ func _ready() -> void:
 			var panel_instance = panel.instantiate()
 			panel_instance.zone = int(i.name)
 			i.add_child(panel_instance)
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
