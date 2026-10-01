@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://c2hk85ptk70rc"]
+
+[ext_resource type="Script" uid="uid://bc4afv0jqhfli" path="res://Scripts/TouchPanel.gd" id="1_5u1cp"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5x2ve"]
+size = Vector3(0.035232544, 0.32373047, 0.07116699)
+
+[node name="TouchPanel" type="Area3D" unique_id=2051217808]
+script = ExtResource("1_5u1cp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=193217713]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0010757446, -0.13891602, 0.0029907227)
+shape = SubResource("BoxShape3D_5x2ve")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

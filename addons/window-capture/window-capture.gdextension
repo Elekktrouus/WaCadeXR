@@ -1,0 +1,10 @@
+[configuration]
+
+entry_symbol = "window_capture_library_init"
+compatibility_minimum = "4.1"
+reloadable = false
+
+[libraries]
+; Relative paths ensure that our GDExtension can be placed anywhere in the project directory.
+windows.x86_64.single.debug = "./windows/window-capture.windows.template_debug.x86_64.dll"
+windows.x86_64.single.release = "./windows/window-capture.windows.template_release.x86_64.dll"
