@@ -14,7 +14,6 @@ func _process(delta: float) -> void:
 
 func _on_body_entered(body: Node3D) -> void:
 	if body is RigidBody3D:
-		print("entered")
 		if body.name == "RHandPhys":
 			GlobalSignal.touch_hit.emit(0)
 		else:
@@ -25,5 +24,4 @@ func _on_body_entered(body: Node3D) -> void:
 
 func _on_body_exited(body: Node3D) -> void:
 	if body is RigidBody3D:
-		print('exited')
 		IPCManager.SetTouch(zone, false)
