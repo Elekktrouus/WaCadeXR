@@ -6,6 +6,16 @@
 radius = 0.05
 height = 0.1
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wgjqp"]
+transparency = 1
+albedo_color = Color(0, 1, 1, 0.44705883)
+emission_enabled = true
+emission = Color(0, 1, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d2qak"]
+transparency = 1
+albedo_color = Color(1, 0, 1, 0.3764706)
+
 [node name="XROrigin3D" type="XROrigin3D" unique_id=895065031]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 current = true
@@ -19,13 +29,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, 0)
 tracker = &"right_hand"
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="RightHand" unique_id=622152708]
-visible = false
 mesh = SubResource("SphereMesh_mmmqd")
+surface_material_override/0 = SubResource("StandardMaterial3D_wgjqp")
 
 [node name="LeftHand" type="XRController3D" parent="." unique_id=291303955]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0, 0)
 tracker = &"left_hand"
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="LeftHand" unique_id=1485686402]
-visible = false
 mesh = SubResource("SphereMesh_mmmqd")
+surface_material_override/0 = SubResource("StandardMaterial3D_d2qak")

@@ -59,7 +59,7 @@ func _process(delta: float) -> void:
 
 
 func update_led(data: PackedByteArray) -> void:
-	var index := 0
+	var index = 0
 	for i in 30:
 		for ii in 4:
 			_set_led(119 - i - ii * 30, data, index * 2)
@@ -68,6 +68,6 @@ func update_led(data: PackedByteArray) -> void:
 
 
 func _set_led(material_index: int, data: PackedByteArray, pixel: int) -> void:
-	var mat := materials[material_index]
-	var o := pixel * BYTES_PER_PIXEL
+	var mat = materials[material_index]
+	var o = pixel * BYTES_PER_PIXEL
 	mat.emission = Color8(data[o], data[o + 1], data[o + 2], 255)
