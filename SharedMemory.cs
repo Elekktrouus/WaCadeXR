@@ -3,8 +3,6 @@ using System;
 using System.IO;
 using System.IO.MemoryMappedFiles;
 
-// Thin wrapper so GDScript can use a Windows named shared-memory block.
-// Requires the .NET build of Godot. Class name must match the file name.
 public partial class SharedMemory : RefCounted
 {
 	private MemoryMappedFile _file;

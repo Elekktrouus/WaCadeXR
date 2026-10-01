@@ -29,6 +29,3 @@ tracker = &"left_hand"
 [node name="MeshInstance3D" type="MeshInstance3D" parent="LeftHand" unique_id=1485686402]
 visible = false
 mesh = SubResource("SphereMesh_mmmqd")
-
-[node name="Camera3D" type="Camera3D" parent="." unique_id=2146163768]
-current = true

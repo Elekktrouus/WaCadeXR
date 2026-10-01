@@ -19,7 +19,6 @@ func _process(_delta: float) -> void:
 	if frame_counter < FRAME_DELAY:
 		return
 	frame_counter = 0
-#
 	if cap.capture_frame():
 		var curr_cap = cap.get_texture()
 		var material = mesh.get_active_material(0)
