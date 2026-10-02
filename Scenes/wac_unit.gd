@@ -60,7 +60,7 @@ func correct_pos(node: Node3D):
 	depth_text.text = "Z: " + str(snapped(depth_norm, 0.01))
 	rad_text.text = "Radius: " + str(max_radius)
 	var test_vec = Vector2(new_pos.x, new_pos.y)
-	if dist_from_center > max_radius and depth_norm < 1.0:
+	if dist_from_center > max_radius and depth_norm < 1.0 and dist_from_center < max_radius+1: #Ensure if you're far enough away, your hand gets freed
 		var new_vec = test_vec * (max_radius / dist_from_center)
 		var new_vec3 = space_start.to_global(Vector3(new_vec.x, new_vec.y, new_pos.z))
 		node.global_position = new_vec3

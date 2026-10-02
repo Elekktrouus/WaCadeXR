@@ -21,6 +21,7 @@ config/icon="res://icon.svg"
 IPCManager="*uid://dfib30eepmg7c"
 GlobalSignal="*uid://5cd8qlg0llef"
 KeyManager="*uid://dfpnb4vjys3o4"
+CsvParser="*uid://bx8iunvirdv1v"
 
 [display]
 
