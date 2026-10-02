@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://c2vjqdxelfsfn"]
+[gd_scene format=4 uid="uid://c2vjqdxelfsfn"]
 
 [ext_resource type="PackedScene" uid="uid://dd6cc7lhy5gbv" path="res://Scenes/WacCab.tscn" id="1_ig5sl"]
 [ext_resource type="PackedScene" uid="uid://lk46nn8rl766" path="res://Scenes/player.tscn" id="1_wgjqp"]
@@ -12,6 +12,25 @@ normal_enabled = true
 normal_texture = ExtResource("3_yyaxx")
 uv1_scale = Vector3(20, 20, 20)
 
+[sub_resource type="ArrayMesh" id="ArrayMesh_yyaxx"]
+lightmap_size_hint = Vector2i(298, 286)
+_surfaces = [{
+"aabb": AABB(-5, -0.5, -3.5, 10, 1, 7),
+"attribute_data": PackedByteArray("AACAPwAAgD8Kkn8/ofoMPwAAgD8AAAAACpJ/P8VObD0AAAAAAAAAALuHbT/FTmw9AACAPwAAgD9i69s6uFcBPwAAgD8AAAAAxhktP7hXAT8AAAAAAAAAAMYZLT9tjX8/AACAPwAAgD/oVVY/YZZUPwAAgD8AAAAAmUtEP2GWVD8AAAAAAAAAAJlLRD9xrwI+AAAAAAAAgD+7h20/ofoMPwAAgD8AAIA/iK0vP67xNz8AAIA/AAAAANe3QT+u8Tc/AAAAAAAAAADXt0E/JuWAPAAAAAAAAAAAxhktP49Q/T4AAAAAAACAP2Lr2zqPUP0+AACAPwAAgD9i69s6mCXlOgAAAAAAAIA/YuvbOm2Nfz8AAAAAAACAP4itLz8m5YA8AACAPwAAgD/582o/FcySPQAAgD8AAAAA+fNqPzePED8AAAAAAAAAAKrpWD83jxA/AAAAAAAAgD/oVVY/ca8CPgAAgD8AAAAAxhktP5gl5ToAAAAAAACAP6rpWD8VzJI9"),
+"format": 34359742519,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAwAEAAUABgAHAAgAAgAJAAAACgALAAwADQAOAA8ABQAQAAMADAARAAoAEgATABQACAAVAAYADwAWAA0AFAAXABIA"),
+"material": SubResource("StandardMaterial3D_v0iea"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AACgwAAAAL8AAGBAAACgwAAAAL8AAGDAAACgwAAAAD8AAGDAAACgQAAAAL8AAGDAAACgwAAAAL8AAGDAAACgwAAAAL8AAGBAAACgwAAAAD8AAGDAAACgwAAAAL8AAGDAAACgQAAAAL8AAGDAAACgwAAAAD8AAGBAAACgwAAAAL8AAGBAAACgwAAAAD8AAGBAAACgQAAAAD8AAGBAAACgQAAAAD8AAGBAAACgwAAAAD8AAGBAAACgwAAAAD8AAGDAAACgQAAAAL8AAGBAAACgQAAAAL8AAGBAAACgQAAAAL8AAGDAAACgQAAAAL8AAGBAAACgQAAAAD8AAGBAAACgQAAAAD8AAGDAAACgQAAAAD8AAGDAAACgQAAAAD8AAGDAAAAAgP9//n8AAACA/3/+fwAAAID/f/5/AIAAAP//AAAAgAAA//8AAACAAAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAAAgP9//n//f/9/AAD/P/9//38AAP8//3//fwAA/z8AgP////8AAACA/////wAAAID/////AAAAgAAA//8AAP9//38AAP8///8AgP9//n///wCA/3/+f///AID/f/5//////wAA/z8AgP////8AAP//AID/f/5/")
+}]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vhduq"]
+albedo_color = Color(0.34781694, 0.34781697, 0.3478169, 1)
+roughness = 0.85
+
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1rd8e"]
 sky_top_color = Color(0.16780671, 0.066739835, 0.30148327, 1)
 sky_horizon_color = Color(0, 0, 0, 1)
@@ -24,7 +43,11 @@ sky_material = SubResource("ProceduralSkyMaterial_1rd8e")
 [sub_resource type="Environment" id="Environment_lu7eo"]
 background_mode = 2
 sky = SubResource("Sky_nkfca")
+ssao_enabled = true
+sdfgi_enabled = true
 glow_enabled = true
+glow_intensity = 0.92
+glow_bloom = 0.45
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_mmmqd"]
 radius = 0.05
@@ -43,6 +66,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
 size = Vector3(10, 1, 7)
 material = SubResource("StandardMaterial3D_v0iea")
 
+[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="." unique_id=818575740]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
+mesh = SubResource("ArrayMesh_yyaxx")
+
 [node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=436367374]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 4.9753275, 0)
 size = Vector3(10, 1, 7)
@@ -50,29 +77,29 @@ size = Vector3(10, 1, 7)
 [node name="CSGBox3D3" type="CSGBox3D" parent="." unique_id=777947299]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 2, 0)
 size = Vector3(1, 5, 7)
+material = SubResource("StandardMaterial3D_vhduq")
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="." unique_id=1513164625]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 2, 0)
 size = Vector3(1, 5, 7)
+material = SubResource("StandardMaterial3D_vhduq")
 
 [node name="CSGBox3D5" type="CSGBox3D" parent="." unique_id=998167956]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 2, 3)
 size = Vector3(10, 5, 1)
-
-[node name="CSGBox3D6" type="CSGBox3D" parent="." unique_id=708876904]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 2, -3)
-size = Vector3(10, 5, 1)
+material = SubResource("StandardMaterial3D_vhduq")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1304219619]
 environment = SubResource("Environment_lu7eo")
 
 [node name="NewCab" parent="." unique_id=707065341 node_paths=PackedStringArray("l_hand", "r_hand") instance=ExtResource("1_ig5sl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.059670866, 0.4993592, -2.120943)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2683847, 0.4993592, -2.120943)
 l_hand = NodePath("../LHandPhys")
 r_hand = NodePath("../RHandPhys")
 
 [node name="LHandPhys" type="RigidBody3D" parent="." unique_id=1218008441]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0279893, 0)
+visible = false
 gravity_scale = 0.0
 
 [node name="L" type="CollisionShape3D" parent="LHandPhys" unique_id=764294003]
@@ -82,6 +109,7 @@ shape = SubResource("SphereShape3D_mmmqd")
 mesh = SubResource("SphereMesh_wgjqp")
 
 [node name="RHandPhys" type="RigidBody3D" parent="." unique_id=2015634066]
+visible = false
 gravity_scale = 0.0
 continuous_cd = true
 
@@ -91,7 +119,40 @@ shape = SubResource("SphereShape3D_mmmqd")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="RHandPhys" unique_id=897058822]
 mesh = SubResource("SphereMesh_wgjqp")
 
-[node name="Node3D" type="Node3D" parent="RHandPhys" unique_id=1039469852]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9658136, 0, 1.1152704)
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=770002622]
+transform = Transform3D(0.9997572, 0.020716485, -0.007526554, 0.0028349035, 0.21778074, 0.97599375, 0.021858297, -0.97577786, 0.21766916, 1.4336247, 4.2197595, -0.7600755)
+light_color = Color(1.347661e-06, 0.5966885, 0.6019524, 1)
+light_energy = 3.232
+spot_range = 10.959
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="." unique_id=1556937175]
+transform = Transform3D(0.9997572, 0.020716485, -0.007526554, 0.0028349035, 0.21778074, 0.97599375, 0.021858297, -0.97577786, 0.21766916, -0.56637526, 4.2197595, -0.7600755)
+light_color = Color(1.347661e-06, 0.5966885, 0.6019524, 1)
+light_energy = 3.232
+spot_range = 10.959
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="." unique_id=1790064861]
+transform = Transform3D(0.9997572, 0.020716485, -0.007526554, 0.0028349035, 0.21778074, 0.97599375, 0.021858297, -0.97577786, 0.21766916, -2.5663753, 4.2197595, -0.7600755)
+light_color = Color(1.347661e-06, 0.5966885, 0.6019524, 1)
+light_energy = 3.232
+spot_range = 10.959
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="." unique_id=1498208224]
+transform = Transform3D(0.9997572, 0.020716485, -0.007526554, 0.0028349035, 0.21778074, 0.97599375, 0.021858297, -0.97577786, 0.21766916, 1.4336247, 3.563799, 2.1673322)
+light_color = Color(1.347661e-06, 0.5966885, 0.6019524, 1)
+light_energy = 3.232
+spot_range = 10.959
+
+[node name="SpotLight3D5" type="SpotLight3D" parent="." unique_id=318789485]
+transform = Transform3D(0.9997572, 0.020716485, -0.007526554, 0.0028349035, 0.21778074, 0.97599375, 0.021858297, -0.97577786, 0.21766916, -0.56637526, 3.563799, 2.1673322)
+light_color = Color(1.347661e-06, 0.5966885, 0.6019524, 1)
+light_energy = 3.232
+spot_range = 10.959
+
+[node name="SpotLight3D6" type="SpotLight3D" parent="." unique_id=1940305860]
+transform = Transform3D(0.9997572, 0.020716485, -0.007526554, 0.0028349035, 0.21778074, 0.97599375, 0.021858297, -0.97577786, 0.21766916, -2.5663753, 3.563799, 2.1673322)
+light_color = Color(1.347661e-06, 0.5966885, 0.6019524, 1)
+light_energy = 3.232
+spot_range = 10.959
 
 [editable path="Player"]

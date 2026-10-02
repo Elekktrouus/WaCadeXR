@@ -10,11 +10,13 @@ var prev_transform: Transform3D = Transform3D()
 func _ready() -> void:
 	if head_cam:
 		prev_transform = head_cam.transform
+	print(XRServer.get_interface(1))
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if not head_cam: #if head cam no longer exists, STOP!!
+	var xr_interface = XRServer.find_interface("OpenXR")
+	if not head_cam or xr_interface.is_initialized() == false: #if head cam no longer exists, STOP!!
 		return
 	
 	var adjusted_transform: Transform3D = head_cam.transform
