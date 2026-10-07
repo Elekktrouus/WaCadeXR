@@ -1,7 +1,6 @@
 extends Node
 
 
-
 var data_dict: Dictionary = {
 	"keychip_number" : 0,
 	"session_date" : 0,

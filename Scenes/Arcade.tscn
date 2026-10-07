@@ -4,6 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://lk46nn8rl766" path="res://Scenes/player.tscn" id="1_wgjqp"]
 [ext_resource type="Texture2D" uid="uid://0hwfqx4367f0" path="res://Tex/wacade_arcade_floor.png" id="2_vhduq"]
 [ext_resource type="Texture2D" uid="uid://bktndb214on6s" path="res://Tex/wacade-arcade-floor-normal-map.png" id="3_yyaxx"]
+[ext_resource type="Script" uid="uid://42b2my51ky2i" path="res://Scripts/fps_limited_viewport.gd" id="5_qwiyq"]
+[ext_resource type="Script" uid="uid://hhr7lx0x6eu" path="res://Scripts/rank_display.gd" id="5_yyaxx"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v0iea"]
 albedo_texture = ExtResource("2_vhduq")
@@ -43,9 +45,6 @@ sky_material = SubResource("ProceduralSkyMaterial_1rd8e")
 [sub_resource type="Environment" id="Environment_lu7eo"]
 background_mode = 2
 sky = SubResource("Sky_nkfca")
-ssao_enabled = true
-sdfgi_enabled = true
-glow_enabled = true
 glow_intensity = 0.92
 glow_bloom = 0.45
 
@@ -56,10 +55,60 @@ radius = 0.05
 radius = 0.05
 height = 0.1
 
+[sub_resource type="PlaneMesh" id="PlaneMesh_mmmqd"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_vhduq"]
+viewport_path = NodePath("SubViewportContainer/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5x2ve"]
+resource_local_to_scene = true
+transparency = 1
+albedo_texture = SubResource("ViewportTexture_vhduq")
+
+[sub_resource type="BoxMesh" id="BoxMesh_5x2ve"]
+
+[sub_resource type="Animation" id="Animation_oihtl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(910, 119)]
+}
+
+[sub_resource type="Animation" id="Animation_aofla"]
+resource_name = "new_animation"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance2D:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(910, 119), Vector2(910, 800), Vector2(910, 119)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nqpwy"]
+_data = {
+&"RESET": SubResource("Animation_oihtl"),
+&"new_animation": SubResource("Animation_aofla")
+}
+
 [node name="Node3D" type="Node3D" unique_id=287221010]
 
 [node name="Player" parent="." unique_id=895065031 instance=ExtResource("1_wgjqp")]
-transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, -0.03266543, 0.7092657, -1.4255905)
+transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 0.4465334, 0.5450537, -1.4255905)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1903722229]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
@@ -99,7 +148,6 @@ r_hand = NodePath("../RHandPhys")
 
 [node name="LHandPhys" type="RigidBody3D" parent="." unique_id=1218008441]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0279893, 0)
-visible = false
 gravity_scale = 0.0
 
 [node name="L" type="CollisionShape3D" parent="LHandPhys" unique_id=764294003]
@@ -109,7 +157,6 @@ shape = SubResource("SphereShape3D_mmmqd")
 mesh = SubResource("SphereMesh_wgjqp")
 
 [node name="RHandPhys" type="RigidBody3D" parent="." unique_id=2015634066]
-visible = false
 gravity_scale = 0.0
 continuous_cd = true
 
@@ -137,6 +184,13 @@ light_color = Color(1.347661e-06, 0.5966885, 0.6019524, 1)
 light_energy = 3.232
 spot_range = 10.959
 
+[node name="SpotLight3D7" type="SpotLight3D" parent="." unique_id=1427808335]
+transform = Transform3D(0.99975705, 0.020716485, -0.007526554, 0.00839565, -0.042189796, 0.9990744, 0.020379765, -0.9988949, -0.04235347, -3.7491822, 3.386917, -0.96373)
+light_color = Color(1.347661e-06, 0.5966885, 0.6019524, 1)
+light_energy = 3.232
+spot_range = 4.0544324
+spot_angle = 70.87872
+
 [node name="SpotLight3D4" type="SpotLight3D" parent="." unique_id=1498208224]
 transform = Transform3D(0.9997572, 0.020716485, -0.007526554, 0.0028349035, 0.21778074, 0.97599375, 0.021858297, -0.97577786, 0.21766916, 1.4336247, 3.563799, 2.1673322)
 light_color = Color(1.347661e-06, 0.5966885, 0.6019524, 1)
@@ -154,5 +208,166 @@ transform = Transform3D(0.9997572, 0.020716485, -0.007526554, 0.0028349035, 0.21
 light_color = Color(1.347661e-06, 0.5966885, 0.6019524, 1)
 light_energy = 3.232
 spot_range = 10.959
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=313793897]
+transform = Transform3D(-4.371139e-08, 1, 0, 4.371139e-08, 1.9106855e-15, -1, -1, -4.371139e-08, -4.371139e-08, -4, 1.5232661, -1)
+mesh = SubResource("PlaneMesh_mmmqd")
+surface_material_override/0 = SubResource("StandardMaterial3D_5x2ve")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=1475727357]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=335807637]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(1024, 1024)
+render_target_update_mode = 4
+script = ExtResource("5_qwiyq")
+fps_cap = 24.0
+
+[node name="Control" type="Control" parent="SubViewportContainer/SubViewport" unique_id=1749578237]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5_yyaxx")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SubViewportContainer/SubViewport/Control" unique_id=638306416]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -179.5
+offset_right = 179.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 48
+
+[node name="Label" type="Label" parent="SubViewportContainer/SubViewport/Control/VBoxContainer" unique_id=1377326999]
+layout_mode = 2
+theme_override_font_sizes/font_size = 82
+text = "Rankings"
+horizontal_alignment = 1
+
+[node name="Panel" type="Panel" parent="SubViewportContainer/SubViewport/Control/VBoxContainer" unique_id=2072325709]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SubViewportContainer/SubViewport/Control/VBoxContainer/Panel" unique_id=846632592]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -68.5
+offset_right = 68.5
+offset_bottom = 67.0
+grow_horizontal = 2
+alignment = 1
+
+[node name="Title" type="Label" parent="SubViewportContainer/SubViewport/Control/VBoxContainer/Panel/VBoxContainer" unique_id=895688680]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "SONG"
+horizontal_alignment = 1
+
+[node name="TotalScore" type="Label" parent="SubViewportContainer/SubViewport/Control/VBoxContainer/Panel/VBoxContainer" unique_id=1238436947]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Score: 0"
+horizontal_alignment = 1
+
+[node name="MaxCombo" type="Label" parent="SubViewportContainer/SubViewport/Control/VBoxContainer/Panel/VBoxContainer" unique_id=767250426]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Max Combo: 0"
+horizontal_alignment = 1
+
+[node name="Accuracy" type="Label" parent="SubViewportContainer/SubViewport/Control/VBoxContainer/Panel/VBoxContainer" unique_id=618673012]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Accuracy: 0"
+horizontal_alignment = 1
+
+[node name="Rank" type="Label" parent="SubViewportContainer/SubViewport/Control/VBoxContainer/Panel/VBoxContainer" unique_id=872007775]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "SS"
+horizontal_alignment = 1
+
+[node name="Panel2" type="Panel" parent="SubViewportContainer/SubViewport/Control/VBoxContainer" unique_id=441256849]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SubViewportContainer/SubViewport/Control/VBoxContainer/Panel2" unique_id=1691639174]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -68.5
+offset_right = 68.5
+offset_bottom = 67.0
+grow_horizontal = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="SubViewportContainer/SubViewport/Control/VBoxContainer/Panel2/VBoxContainer" unique_id=2024823672]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "SONG"
+horizontal_alignment = 1
+
+[node name="Panel3" type="Panel" parent="SubViewportContainer/SubViewport/Control/VBoxContainer" unique_id=1254002928]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SubViewportContainer/SubViewport/Control/VBoxContainer/Panel3" unique_id=1111865863]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -68.5
+offset_right = 68.5
+offset_bottom = 67.0
+grow_horizontal = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="SubViewportContainer/SubViewport/Control/VBoxContainer/Panel3/VBoxContainer" unique_id=1661291924]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "SONG"
+horizontal_alignment = 1
+
+[node name="UserBox" type="VBoxContainer" parent="SubViewportContainer/SubViewport/Control" unique_id=712372726]
+layout_mode = 1
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Username" type="Label" parent="SubViewportContainer/SubViewport/Control/UserBox" unique_id=2023976986]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "User: ME"
+
+[node name="SessionTime" type="Label" parent="SubViewportContainer/SubViewport/Control/UserBox" unique_id=2109490364]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Session Time: million"
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="SubViewportContainer/SubViewport/Control" unique_id=142324492]
+position = Vector2(910, 119)
+scale = Vector2(205.5, 205.5)
+mesh = SubResource("BoxMesh_5x2ve")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SubViewportContainer/SubViewport/Control" unique_id=1061147694]
+libraries/ = SubResource("AnimationLibrary_nqpwy")
+autoplay = &"new_animation"
 
 [editable path="Player"]

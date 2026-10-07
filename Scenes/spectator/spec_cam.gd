@@ -17,6 +17,9 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	var xr_interface = XRServer.find_interface("OpenXR")
 	if not head_cam or xr_interface.is_initialized() == false: #if head cam no longer exists, STOP!!
+		var input_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+		if input_dir.length() > 0:
+			noclip_forward(input_dir, delta)
 		return
 	
 	var adjusted_transform: Transform3D = head_cam.transform
@@ -29,3 +32,12 @@ func _process(delta: float) -> void:
 	global_transform = head_cam.get_parent().global_transform * adjusted_transform
 	
 	prev_transform = adjusted_transform
+
+func noclip_forward(input_dir, delta):
+	var forward = -global_transform.basis.z
+	var right = -global_transform.basis.x     
+
+	var move_dir = (right * input_dir.x + forward * input_dir.y).normalized()
+	position.x += -move_dir.x * 1/5
+	position.z += -move_dir.z * 1/5
+	position.y += -move_dir.y * 1/5

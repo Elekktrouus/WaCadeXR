@@ -87,7 +87,6 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_05yof")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_relac"]
-transparency = 1
 albedo_color = Color(1, 1, 1, 0.15686275)
 albedo_texture = ExtResource("5_jnvdn")
 metallic_specular = 0.0
@@ -8126,6 +8125,7 @@ mesh = SubResource("ArrayMesh_3pflq")
 
 [node name="ButtonCovers" type="MeshInstance3D" parent="Body/Ring" unique_id=1677267409]
 transform = Transform3D(1, 0, 0, 0, 0.9659258, 0.2588191, 0, -0.2588191, 0.9659258, 0, 1.2677534, 0.028560434)
+visible = false
 mesh = ExtResource("4_eb556")
 surface_material_override/0 = SubResource("StandardMaterial3D_relac")
 
@@ -10365,25 +10365,21 @@ mesh = SubResource("ArrayMesh_vh142")
 transform = Transform3D(-1, 1.565573e-08, 1.4585075e-07, -2.2626677e-08, 0.9659258, -0.25881907, -1.44933e-07, -0.25881907, -0.9659258, -0.09404981, 1.5162094, 0.52428967)
 light_color = Color(0.53512573, 0.00022977621, 0.5430569, 1)
 light_energy = 0.01
-shadow_enabled = true
 
 [node name="Light2" type="OmniLight3D" parent="." unique_id=554691569]
 transform = Transform3D(-1, 1.565573e-08, 1.4585075e-07, -2.2626677e-08, 0.9659258, -0.25881907, -1.44933e-07, -0.25881907, -0.9659258, 0.17599827, 1.5162094, 0.5242896)
 light_color = Color(0.53512573, 0.00022977621, 0.5430569, 1)
 light_energy = 0.01
-shadow_enabled = true
 
 [node name="Light3" type="OmniLight3D" parent="." unique_id=2038408736]
 transform = Transform3D(-1, 1.565573e-08, 1.4585075e-07, -2.2626677e-08, 0.9659258, -0.25881907, -1.44933e-07, -0.25881907, -0.9659258, 0.17599827, 1.2584289, 0.5698981)
 light_color = Color(0.53512573, 0.00022977621, 0.5430569, 1)
 light_energy = 0.01
-shadow_enabled = true
 
 [node name="Light4" type="OmniLight3D" parent="." unique_id=1994715460]
 transform = Transform3D(-1, 1.5655733e-08, 1.4585075e-07, -2.2626677e-08, 0.9659258, -0.25881907, -1.44933e-07, -0.25881907, -0.9659258, -0.09473467, 1.2584289, 0.5698981)
 light_color = Color(0.53512573, 0.00022977621, 0.5430569, 1)
 light_energy = 0.01
-shadow_enabled = true
 
 [node name="SubViewport" type="SubViewport" parent="." unique_id=2012853992]
 size = Vector2i(2, 2)
