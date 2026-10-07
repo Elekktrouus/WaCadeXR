@@ -1,7 +1,15 @@
 [gd_scene format=3 uid="uid://dn4hnjqmrhtji"]
 
+[ext_resource type="Script" uid="uid://42b2my51ky2i" path="res://Scripts/fps_limited_viewport.gd" id="1_gqojk"]
 [ext_resource type="Script" uid="uid://b4862lq0twdg6" path="res://Scenes/spectator/spec_cam.gd" id="1_tll3d"]
 [ext_resource type="PackedScene" uid="uid://c2vjqdxelfsfn" path="res://Scenes/Arcade.tscn" id="2_gqojk"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_d6je5"]
+viewport_path = NodePath("SubViewportContainer/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i2ggw"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_d6je5")
 
 [node name="Spectator" type="Control" unique_id=41876772]
 layout_mode = 3
@@ -33,15 +41,19 @@ metadata/_edit_use_anchors_ = true
 handle_input_locally = false
 size = Vector2i(1920, 1080)
 render_target_update_mode = 4
+script = ExtResource("1_gqojk")
 
 [node name="SpecCam" type="Camera3D" parent="TextureRect/SubViewportContainer/SubViewport" unique_id=1808358045 node_paths=PackedStringArray("head_cam")]
-transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -0.24558598, 1.9196522, -0.99294406)
+transform = Transform3D(-2.1855695e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855695e-07, -2.245586, 1.9196522, -0.99294406)
 script = ExtResource("1_tll3d")
 head_cam = NodePath("../../../../HMD/Node3D/Player/XRCamera3D")
 
 [node name="HMD" type="SubViewport" parent="." unique_id=67144292]
 
 [node name="Node3D" parent="HMD" unique_id=287221010 instance=ExtResource("2_gqojk")]
+
+[node name="MeshInstance3D" parent="HMD/Node3D" index="18" unique_id=313793897]
+surface_material_override/0 = SubResource("StandardMaterial3D_i2ggw")
 
 [editable path="HMD/Node3D"]
 [editable path="HMD/Node3D/Player"]
