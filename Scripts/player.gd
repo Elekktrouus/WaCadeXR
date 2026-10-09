@@ -1,7 +1,7 @@
 extends XROrigin3D
 
-@onready var rhandphys: RigidBody3D = get_parent().get_node("RHandPhys")
-@onready var lhandphys: RigidBody3D = get_parent().get_node("LHandPhys")
+@onready var rhandphys: StaticBody3D = get_parent().get_node("RHandPhys")
+@onready var lhandphys: StaticBody3D = get_parent().get_node("LHandPhys")
 @onready var rhand = $RightHand
 @onready var lhand = $LeftHand
 const MAX_DESYNC_DISTANCE: float = 0.5
@@ -25,12 +25,10 @@ func _process(delta: float) -> void:
 
 
 func _physics_process(delta: float) -> void:
-	follow(rhandphys, rhand, delta)
-	follow(lhandphys, lhand, delta)
-	
+	GlobalSignal.request_movement.emit(rhandphys, rhand.global_position)
+	GlobalSignal.request_movement.emit(lhandphys, lhand.global_position)
 	#fix_collision(rhandphys, rhandprev)
 	#fix_collision(lhandphys, lhandprev)
-	
 	lhandprev = lhandphys.global_position
 	rhandprev = rhandphys.global_position
 	

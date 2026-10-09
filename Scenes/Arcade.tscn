@@ -141,29 +141,24 @@ material = SubResource("StandardMaterial3D_vhduq")
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1304219619]
 environment = SubResource("Environment_lu7eo")
 
-[node name="NewCab" parent="." unique_id=707065341 node_paths=PackedStringArray("l_hand", "r_hand") instance=ExtResource("1_ig5sl")]
+[node name="NewCab" parent="." unique_id=707065341 instance=ExtResource("1_ig5sl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2683847, 0.4993592, -2.120943)
-l_hand = NodePath("../LHandPhys")
-r_hand = NodePath("../RHandPhys")
 
-[node name="LHandPhys" type="RigidBody3D" parent="." unique_id=1218008441]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0279893, 0)
-gravity_scale = 0.0
-
-[node name="L" type="CollisionShape3D" parent="LHandPhys" unique_id=764294003]
-shape = SubResource("SphereShape3D_mmmqd")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="LHandPhys" unique_id=1644778931]
-mesh = SubResource("SphereMesh_wgjqp")
-
-[node name="RHandPhys" type="RigidBody3D" parent="." unique_id=2015634066]
-gravity_scale = 0.0
-continuous_cd = true
+[node name="RHandPhys" type="StaticBody3D" parent="." unique_id=1875187321]
 
 [node name="R" type="CollisionShape3D" parent="RHandPhys" unique_id=402978105]
 shape = SubResource("SphereShape3D_mmmqd")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="RHandPhys" unique_id=897058822]
+mesh = SubResource("SphereMesh_wgjqp")
+
+[node name="LHandPhys" type="StaticBody3D" parent="." unique_id=1045782927]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0279893, 0)
+
+[node name="L" type="CollisionShape3D" parent="LHandPhys" unique_id=764294003]
+shape = SubResource("SphereShape3D_mmmqd")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="LHandPhys" unique_id=1644778931]
 mesh = SubResource("SphereMesh_wgjqp")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=770002622]
@@ -211,6 +206,11 @@ spot_range = 10.959
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=313793897]
 transform = Transform3D(-4.371139e-08, 1, 0, 4.371139e-08, 1.9106855e-15, -1, -1, -4.371139e-08, -4.371139e-08, -4, 1.5232661, -1)
+mesh = SubResource("PlaneMesh_mmmqd")
+surface_material_override/0 = SubResource("StandardMaterial3D_5x2ve")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=137238672]
+transform = Transform3D(1, 0, 4.371139e-08, 4.371139e-08, 1.9106855e-15, -1, 0, 1, 1.9106855e-15, -1.8938782, 1.5232661, -2.452098)
 mesh = SubResource("PlaneMesh_mmmqd")
 surface_material_override/0 = SubResource("StandardMaterial3D_5x2ve")
 
