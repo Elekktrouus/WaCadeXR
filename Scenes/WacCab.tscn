@@ -1,10 +1,14 @@
 [gd_scene format=4 uid="uid://dd6cc7lhy5gbv"]
 
 [ext_resource type="Script" uid="uid://c4t5q1wdt3668" path="res://Scenes/wac_unit.gd" id="2_4e3td"]
+[ext_resource type="Texture2D" uid="uid://c3bmtngrengrm" path="res://Tex/WacVRCab_Material_1_Diffuse.png" id="2_w3t65"]
 [ext_resource type="Script" uid="uid://cs8da6jta2xyj" path="res://Scripts/LightManager.gd" id="3_4e3td"]
 [ext_resource type="Shader" uid="uid://h4mtsl2dle2j" path="res://Scenes/LCDShader.gdshader" id="3_af7e0"]
+[ext_resource type="Texture2D" uid="uid://djm81mitatsuh" path="res://Tex/WacVRCab_Material_4_Emission.png" id="3_qg27j"]
 [ext_resource type="ArrayMesh" uid="uid://dulcw7vu15xg7" path="res://Resource/buttoncovers.tres" id="4_eb556"]
+[ext_resource type="Texture2D" uid="uid://vcom81pt07d7" path="res://Tex/WacVRCab_Material_2_MetallicRoughness.png" id="4_f28l7"]
 [ext_resource type="Texture2D" uid="uid://656gq5suxdtk" path="res://Tex/WacVRCabLights_WacVRButtonCover_Alpha.png" id="5_jnvdn"]
+[ext_resource type="Texture2D" uid="uid://4dphscw33uih" path="res://Tex/WacVRCab_Material_3_Normal.png" id="5_qtbxt"]
 [ext_resource type="ArrayMesh" uid="uid://5apodyngxcfc" path="res://Resource/buttoncoversextend.tres" id="5_relac"]
 [ext_resource type="Texture2D" uid="uid://chlo0ixwmu62p" path="res://Tex/WacVRCabLights_WacVRButtonCover_AlbedoRough.png" id="6_a7p14"]
 [ext_resource type="ArrayMesh" uid="uid://by8ymvk6hun0s" path="res://Resource/light.tres" id="7_relac"]
@@ -52,6 +56,17 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_bmiiu")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qwiyq"]
+albedo_texture = ExtResource("2_w3t65")
+metallic = 1.0
+metallic_texture = ExtResource("4_f28l7")
+emission_enabled = true
+emission = Color(1, 0.17360124, 0.8102936, 1)
+emission_operator = 1
+emission_texture = ExtResource("3_qg27j")
+normal_enabled = true
+normal_texture = ExtResource("5_qtbxt")
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4al1c"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_05yof"]
@@ -86,8 +101,16 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_05yof")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oihtl"]
+albedo_texture = ExtResource("2_w3t65")
+metallic = 1.0
+metallic_texture = ExtResource("4_f28l7")
+normal_enabled = true
+normal_texture = ExtResource("5_qtbxt")
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_relac"]
-albedo_color = Color(1, 1, 1, 0.15686275)
+transparency = 1
+albedo_color = Color(1, 1, 1, 0.34901962)
 albedo_texture = ExtResource("5_jnvdn")
 metallic_specular = 0.0
 roughness_texture = ExtResource("6_a7p14")
@@ -8119,13 +8142,14 @@ script = ExtResource("2_4e3td")
 
 [node name="Body" type="MeshInstance3D" parent="." unique_id=1492145834]
 mesh = SubResource("ArrayMesh_relac")
+surface_material_override/0 = SubResource("StandardMaterial3D_qwiyq")
 
 [node name="Ring" type="MeshInstance3D" parent="Body" unique_id=1077875731]
 mesh = SubResource("ArrayMesh_3pflq")
+surface_material_override/0 = SubResource("StandardMaterial3D_oihtl")
 
 [node name="ButtonCovers" type="MeshInstance3D" parent="Body/Ring" unique_id=1677267409]
 transform = Transform3D(1, 0, 0, 0, 0.9659258, 0.2588191, 0, -0.2588191, 0.9659258, 0, 1.2677534, 0.028560434)
-visible = false
 mesh = ExtResource("4_eb556")
 surface_material_override/0 = SubResource("StandardMaterial3D_relac")
 
@@ -8134,9 +8158,10 @@ transform = Transform3D(1.4139463, 0, 0, 0, 1.3657672, 0.3659563, 0, -0.3659563,
 visible = false
 mesh = ExtResource("5_relac")
 
-[node name="Lights" type="Node3D" parent="Body/Ring" unique_id=1362983525 node_paths=PackedStringArray("lights")]
+[node name="Lights" type="Node3D" parent="Body/Ring" unique_id=1362983525 node_paths=PackedStringArray("cab_body", "lights")]
 transform = Transform3D(1, 0, 0, 0, 0.9666552, 0.25608158, 0, -0.25608158, 0.9666552, 0, 1.2677534, 0.028560434)
 script = ExtResource("3_4e3td")
+cab_body = NodePath("../..")
 lights = [NodePath("1_0"), NodePath("2_0"), NodePath("3_0"), NodePath("4_0"), NodePath("5_0"), NodePath("6_0"), NodePath("7_0"), NodePath("8_0"), NodePath("9_0"), NodePath("10_0"), NodePath("11_0"), NodePath("12_0"), NodePath("13_0"), NodePath("14_0"), NodePath("15_0"), NodePath("16_0"), NodePath("17_0"), NodePath("18_0"), NodePath("19_0"), NodePath("20_0"), NodePath("21_0"), NodePath("22_0"), NodePath("23_0"), NodePath("24_0"), NodePath("25_0"), NodePath("26_0"), NodePath("27_0"), NodePath("28_0"), NodePath("29_0"), NodePath("30_0"), NodePath("31_0"), NodePath("32_0"), NodePath("33_0"), NodePath("34_0"), NodePath("35_0"), NodePath("36_0"), NodePath("37_0"), NodePath("38_0"), NodePath("39_0"), NodePath("40_0"), NodePath("41_0"), NodePath("42_0"), NodePath("43_0"), NodePath("44_0"), NodePath("45_0"), NodePath("46_0"), NodePath("47_0"), NodePath("48_0"), NodePath("49_0"), NodePath("50_0"), NodePath("51_0"), NodePath("52_0"), NodePath("53_0"), NodePath("54_0"), NodePath("55_0"), NodePath("56_0"), NodePath("57_0"), NodePath("58_0"), NodePath("59_0"), NodePath("60_0"), NodePath("61_0"), NodePath("62_0"), NodePath("63_0"), NodePath("64_0"), NodePath("65_0"), NodePath("66_0"), NodePath("67_0"), NodePath("68_0"), NodePath("69_0"), NodePath("70_0"), NodePath("71_0"), NodePath("72_0"), NodePath("73_0"), NodePath("74_0"), NodePath("75_0"), NodePath("76_0"), NodePath("77_0"), NodePath("78_0"), NodePath("79_0"), NodePath("80_0"), NodePath("81_0"), NodePath("82_0"), NodePath("83_0"), NodePath("84_0"), NodePath("85_0"), NodePath("86_0"), NodePath("87_0"), NodePath("88_0"), NodePath("89_0"), NodePath("90_0"), NodePath("91_0"), NodePath("92_0"), NodePath("93_0"), NodePath("94_0"), NodePath("95_0"), NodePath("96_0"), NodePath("97_0"), NodePath("98_0"), NodePath("99_0"), NodePath("100_0"), NodePath("101_0"), NodePath("102_0"), NodePath("103_0"), NodePath("104_0"), NodePath("105_0"), NodePath("106_0"), NodePath("107_0"), NodePath("108_0"), NodePath("109_0"), NodePath("110_0"), NodePath("111_0"), NodePath("112_0"), NodePath("113_0"), NodePath("114_0"), NodePath("115_0"), NodePath("116_0"), NodePath("117_0"), NodePath("118_0"), NodePath("119_0"), NodePath("120_0"), NodePath("121_0"), NodePath("122_0"), NodePath("123_0"), NodePath("124_0"), NodePath("125_0"), NodePath("126_0"), NodePath("127_0"), NodePath("128_0"), NodePath("129_0"), NodePath("130_0"), NodePath("131_0"), NodePath("132_0"), NodePath("133_0"), NodePath("134_0"), NodePath("135_0"), NodePath("136_0"), NodePath("137_0"), NodePath("138_0"), NodePath("139_0"), NodePath("140_0"), NodePath("141_0"), NodePath("142_0"), NodePath("143_0"), NodePath("144_0"), NodePath("145_0"), NodePath("146_0"), NodePath("147_0"), NodePath("148_0"), NodePath("149_0"), NodePath("150_0"), NodePath("151_0"), NodePath("152_0"), NodePath("153_0"), NodePath("154_0"), NodePath("155_0"), NodePath("156_0"), NodePath("157_0"), NodePath("158_0"), NodePath("159_0"), NodePath("160_0"), NodePath("161_0"), NodePath("162_0"), NodePath("163_0"), NodePath("164_0"), NodePath("165_0"), NodePath("166_0"), NodePath("167_0"), NodePath("168_0"), NodePath("169_0"), NodePath("170_0"), NodePath("171_0"), NodePath("172_0"), NodePath("173_0"), NodePath("174_0"), NodePath("175_0"), NodePath("176_0"), NodePath("177_0"), NodePath("178_0"), NodePath("179_0"), NodePath("180_0"), NodePath("181_0"), NodePath("182_0"), NodePath("183_0"), NodePath("184_0"), NodePath("185_0"), NodePath("186_0"), NodePath("187_0"), NodePath("188_0"), NodePath("189_0"), NodePath("190_0"), NodePath("191_0"), NodePath("192_0"), NodePath("193_0"), NodePath("194_0"), NodePath("195_0"), NodePath("196_0"), NodePath("197_0"), NodePath("198_0"), NodePath("199_0"), NodePath("200_0"), NodePath("201_0"), NodePath("202_0"), NodePath("203_0"), NodePath("204_0"), NodePath("205_0"), NodePath("206_0"), NodePath("207_0"), NodePath("208_0"), NodePath("209_0"), NodePath("210_0"), NodePath("211_0"), NodePath("212_0"), NodePath("213_0"), NodePath("214_0"), NodePath("215_0"), NodePath("216_0"), NodePath("217_0"), NodePath("218_0"), NodePath("219_0"), NodePath("220_0"), NodePath("221_0"), NodePath("222_0"), NodePath("223_0"), NodePath("224_0"), NodePath("225_0"), NodePath("226_0"), NodePath("227_0"), NodePath("228_0"), NodePath("229_0"), NodePath("230_0"), NodePath("231_0"), NodePath("232_0"), NodePath("233_0"), NodePath("234_0"), NodePath("235_0"), NodePath("236_0"), NodePath("237_0"), NodePath("238_0"), NodePath("239_0"), NodePath("240_0")]
 
 [node name="1_0" type="MeshInstance3D" parent="Body/Ring/Lights" unique_id=1769603069]
@@ -10305,6 +10330,7 @@ transform = Transform3D(0.62932, 0.6936587, 0.3504194, 0.7771462, -0.5617131, -0
 mesh = SubResource("ArrayMesh_6ieqc")
 
 [node name="RingCollider" type="MeshInstance3D" parent="Body" unique_id=1042347869]
+visible = false
 mesh = ExtResource("8_3pflq")
 
 [node name="Screen" type="MeshInstance3D" parent="Body" unique_id=225419887]

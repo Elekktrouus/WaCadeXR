@@ -16,6 +16,8 @@ public partial class IPCManager : Node
 
 	private const int TouchOffset = 4;
 	private const int TouchCount = 240;
+	private const int CabLightOffset = 240;
+	private const int CabLightBytes = 4;
 	private const int LightOffset = 244;
 	private const int LightBytes = 1920;
 	private const int LightFlagOffset = LightOffset + 3;
@@ -62,6 +64,13 @@ public partial class IPCManager : Node
 		EnsureInitialization();
 		if (!_isInitialized) return Array.Empty<byte>();
 		return ReadBytesSafe(LightOffset, LightBytes);
+	}
+
+	public byte[] GetCabLightData()
+	{
+		EnsureInitialization();
+		if (!_isInitialized) return Array.Empty<byte>();
+		return ReadBytesSafe(LightOffset, CabLightBytes);
 	}
 
 	public void SetTouch(int area, bool state)

@@ -1,6 +1,7 @@
 extends Node
 class_name LightManager
 
+@export var cab_body: MeshInstance3D
 @export var lights: Array[MeshInstance3D] = []
 @export var fade_duration: float = 0.5
 @export var use_ipc_lighting: bool = true
@@ -44,11 +45,19 @@ func _process(delta: float) -> void:
 	led_timer -= LED_INTERVAL
 
 	var data: PackedByteArray = IPCManager.GetLightData()
+	var cab_data: PackedByteArray = IPCManager.GetCabLightData()
+	
 	if data.size() < EXPECTED_BYTES:
 		return
 
 	is_ipc_idle = (data[3] == 0)
+	var fake_arr: Array[int]
+	
+	for i in range(1920):
+		fake_arr.append(randi_range(0, 255)) 
+	var fake_data: PackedByteArray = PackedByteArray(fake_arr)
 	if is_ipc_idle:
+		update_led(fake_data)
 		return
 
 	if data == last_data:
@@ -56,11 +65,12 @@ func _process(delta: float) -> void:
 	last_data = data
 
 	update_led(data)
+	update_cab_led(cab_data)
 
 
 func update_led(data: PackedByteArray) -> void:
 	var index = 0
-	for i in 30:
+	for i in 30: #iterate through 
 		for ii in 4:
 			_set_led(119 - i - ii * 30, data, index * 2)
 			_set_led(210 + i - ii * 30, data, (index + 120) * 2)
@@ -71,3 +81,7 @@ func _set_led(material_index: int, data: PackedByteArray, pixel: int) -> void:
 	var mat = materials[material_index]
 	var o = pixel * BYTES_PER_PIXEL
 	mat.emission = Color8(data[o], data[o + 1], data[o + 2], 255)
+	
+func update_cab_led(data: PackedByteArray) -> void:
+	print(data)
+	cab_body.get_active_material(0).emission = Color8(data[0], data[1], data[2], 255)
