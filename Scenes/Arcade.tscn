@@ -141,10 +141,10 @@ material = SubResource("StandardMaterial3D_vhduq")
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1304219619]
 environment = SubResource("Environment_lu7eo")
 
-[node name="NewCab" parent="." unique_id=707065341 instance=ExtResource("1_ig5sl")]
+[node name="NewCab" parent="." unique_id=707065341 groups=["Hand"] instance=ExtResource("1_ig5sl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2683847, 0.4993592, -2.120943)
 
-[node name="RHandPhys" type="StaticBody3D" parent="." unique_id=1875187321]
+[node name="RHandPhys" type="StaticBody3D" parent="." unique_id=1875187321 groups=["Hand"]]
 
 [node name="R" type="CollisionShape3D" parent="RHandPhys" unique_id=402978105]
 shape = SubResource("SphereShape3D_mmmqd")

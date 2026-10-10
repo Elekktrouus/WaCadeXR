@@ -75,6 +75,7 @@ public partial class IPCManager : Node
 
 	public void SetTouch(int area, bool state)
 	{
+		GD.Print(area + ": " + state);
 		area -= 1; // 0-239
 		int idx = area < 120 ? area + 120 : area - 120;
 		_touchData[idx] = (byte)(state ? 1 : 0);

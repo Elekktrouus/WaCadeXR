@@ -83,5 +83,4 @@ func _set_led(material_index: int, data: PackedByteArray, pixel: int) -> void:
 	mat.emission = Color8(data[o], data[o + 1], data[o + 2], 255)
 	
 func update_cab_led(data: PackedByteArray) -> void:
-	print(data)
 	cab_body.get_active_material(0).emission = Color8(data[0], data[1], data[2], 255)
