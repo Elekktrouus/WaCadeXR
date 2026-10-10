@@ -68,21 +68,21 @@ func _on_request_movement(node: Node3D, pos: Vector3):
 	
 
 func _on_card_trigger_body_entered(body: Node3D) -> void:
-	if body is RigidBody3D:
+	if body is StaticBody3D:
 		KeyManager.PressKey(0x0D)
 
 
 func _on_card_trigger_body_exited(body: Node3D) -> void:
-	if body is RigidBody3D:
+	if body is StaticBody3D:
 		KeyManager.ReleaseKey(0x0D)
 
 
 func _on_coin_trigger_body_entered(body: Node3D) -> void:
-	if body is RigidBody3D:
+	if body is StaticBody3D:
 		IPCManager.SetCoinButton(true)
 	
 
 
 func _on_coin_trigger_body_exited(body: Node3D) -> void:
-	if body is RigidBody3D:
+	if body is StaticBody3D:
 		IPCManager.SetCoinButton(false)
