@@ -36,6 +36,10 @@ project/assembly_name="WACVR_Godot"
 
 import/blender/enabled=false
 
+[global_group]
+
+Hand=""
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
