@@ -4,8 +4,11 @@
 [ext_resource type="PackedScene" uid="uid://lk46nn8rl766" path="res://Scenes/player.tscn" id="1_wgjqp"]
 [ext_resource type="Texture2D" uid="uid://0hwfqx4367f0" path="res://Tex/wacade_arcade_floor.png" id="2_vhduq"]
 [ext_resource type="Texture2D" uid="uid://bktndb214on6s" path="res://Tex/wacade-arcade-floor-normal-map.png" id="3_yyaxx"]
+[ext_resource type="Texture2D" uid="uid://chlo0ixwmu62p" path="res://Tex/WacVRCabLights_WacVRButtonCover_AlbedoRough.png" id="4_oihtl"]
 [ext_resource type="Script" uid="uid://42b2my51ky2i" path="res://Scripts/fps_limited_viewport.gd" id="5_qwiyq"]
 [ext_resource type="Script" uid="uid://hhr7lx0x6eu" path="res://Scripts/rank_display.gd" id="5_yyaxx"]
+[ext_resource type="PackedScene" uid="uid://ddse0s0it746e" path="res://Model/Room/conv_hall.tscn" id="8_aofla"]
+[ext_resource type="PackedScene" uid="uid://5csod2cp43ff" path="res://Model/ChCab/ch_cab.tscn" id="9_nqpwy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v0iea"]
 albedo_texture = ExtResource("2_vhduq")
@@ -31,7 +34,8 @@ _surfaces = [{
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vhduq"]
 albedo_color = Color(0.34781694, 0.34781697, 0.3478169, 1)
-roughness = 0.85
+albedo_texture = ExtResource("4_oihtl")
+roughness_texture_channel = 3
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1rd8e"]
 sky_top_color = Color(0.16780671, 0.066739835, 0.30148327, 1)
@@ -112,29 +116,41 @@ transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 0.44
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1903722229]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
+visible = false
 size = Vector3(10, 1, 7)
 material = SubResource("StandardMaterial3D_v0iea")
 
 [node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="." unique_id=818575740]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
+visible = false
 mesh = SubResource("ArrayMesh_yyaxx")
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=436367374]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 4.9753275, 0)
+visible = false
 size = Vector3(10, 1, 7)
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="." unique_id=777947299]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 2, 0)
+visible = false
 size = Vector3(1, 5, 7)
 material = SubResource("StandardMaterial3D_vhduq")
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="." unique_id=1513164625]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 2, 0)
+visible = false
 size = Vector3(1, 5, 7)
 material = SubResource("StandardMaterial3D_vhduq")
 
 [node name="CSGBox3D5" type="CSGBox3D" parent="." unique_id=998167956]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 2, 3)
+visible = false
+size = Vector3(10, 5, 1)
+material = SubResource("StandardMaterial3D_vhduq")
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="." unique_id=959241706]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 2, -3.6093962)
+visible = false
 size = Vector3(10, 5, 1)
 material = SubResource("StandardMaterial3D_vhduq")
 
@@ -152,7 +168,7 @@ shape = SubResource("SphereShape3D_mmmqd")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="RHandPhys" unique_id=897058822]
 mesh = SubResource("SphereMesh_wgjqp")
 
-[node name="LHandPhys" type="StaticBody3D" parent="." unique_id=1045782927]
+[node name="LHandPhys" type="StaticBody3D" parent="." unique_id=1045782927 groups=["Hand"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0279893, 0)
 
 [node name="L" type="CollisionShape3D" parent="LHandPhys" unique_id=764294003]
@@ -162,19 +178,19 @@ shape = SubResource("SphereShape3D_mmmqd")
 mesh = SubResource("SphereMesh_wgjqp")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=770002622]
-transform = Transform3D(0.9997572, 0.020716485, -0.007526554, 0.0028349035, 0.21778074, 0.97599375, 0.021858297, -0.97577786, 0.21766916, 1.4336247, 4.2197595, -0.7600755)
+transform = Transform3D(0.99975705, 0.020716486, -0.007526552, 0.0028349033, 0.21778074, 0.97599363, 0.021858295, -0.97577786, 0.2176691, 1.4336247, 7.352437, 0.34340817)
 light_color = Color(1.347661e-06, 0.5966885, 0.6019524, 1)
 light_energy = 3.232
 spot_range = 10.959
 
 [node name="SpotLight3D2" type="SpotLight3D" parent="." unique_id=1556937175]
-transform = Transform3D(0.9997572, 0.020716485, -0.007526554, 0.0028349035, 0.21778074, 0.97599375, 0.021858297, -0.97577786, 0.21766916, -0.56637526, 4.2197595, -0.7600755)
+transform = Transform3D(0.99975705, 0.020716486, -0.007526552, 0.0028349033, 0.21778074, 0.97599363, 0.021858295, -0.97577786, 0.2176691, -0.56637526, 7.352437, 0.34340817)
 light_color = Color(1.347661e-06, 0.5966885, 0.6019524, 1)
 light_energy = 3.232
 spot_range = 10.959
 
 [node name="SpotLight3D3" type="SpotLight3D" parent="." unique_id=1790064861]
-transform = Transform3D(0.9997572, 0.020716485, -0.007526554, 0.0028349035, 0.21778074, 0.97599375, 0.021858297, -0.97577786, 0.21766916, -2.5663753, 4.2197595, -0.7600755)
+transform = Transform3D(0.99975705, 0.020716486, -0.007526552, 0.0028349033, 0.21778074, 0.97599363, 0.021858295, -0.97577786, 0.2176691, -2.5663753, 7.352437, 0.34340817)
 light_color = Color(1.347661e-06, 0.5966885, 0.6019524, 1)
 light_energy = 3.232
 spot_range = 10.959
@@ -187,30 +203,25 @@ spot_range = 4.0544324
 spot_angle = 70.87872
 
 [node name="SpotLight3D4" type="SpotLight3D" parent="." unique_id=1498208224]
-transform = Transform3D(0.9997572, 0.020716485, -0.007526554, 0.0028349035, 0.21778074, 0.97599375, 0.021858297, -0.97577786, 0.21766916, 1.4336247, 3.563799, 2.1673322)
+transform = Transform3D(0.99975705, 0.020716486, -0.007526552, 0.0028349033, 0.21778074, 0.97599363, 0.021858295, -0.97577786, 0.2176691, 1.4336247, 8.915366, 12.574533)
 light_color = Color(1.347661e-06, 0.5966885, 0.6019524, 1)
 light_energy = 3.232
 spot_range = 10.959
 
 [node name="SpotLight3D5" type="SpotLight3D" parent="." unique_id=318789485]
-transform = Transform3D(0.9997572, 0.020716485, -0.007526554, 0.0028349035, 0.21778074, 0.97599375, 0.021858297, -0.97577786, 0.21766916, -0.56637526, 3.563799, 2.1673322)
+transform = Transform3D(0.99975705, 0.020716486, -0.007526552, 0.0028349033, 0.21778074, 0.97599363, 0.021858295, -0.97577786, 0.2176691, -0.56637526, 8.915366, 12.574533)
 light_color = Color(1.347661e-06, 0.5966885, 0.6019524, 1)
 light_energy = 3.232
 spot_range = 10.959
 
 [node name="SpotLight3D6" type="SpotLight3D" parent="." unique_id=1940305860]
-transform = Transform3D(0.9997572, 0.020716485, -0.007526554, 0.0028349035, 0.21778074, 0.97599375, 0.021858297, -0.97577786, 0.21766916, -2.5663753, 3.563799, 2.1673322)
+transform = Transform3D(0.99975705, 0.020716486, -0.007526552, 0.0028349033, 0.21778074, 0.97599363, 0.021858295, -0.97577786, 0.2176691, -2.5663753, 8.915366, 12.574533)
 light_color = Color(1.347661e-06, 0.5966885, 0.6019524, 1)
 light_energy = 3.232
 spot_range = 10.959
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=313793897]
 transform = Transform3D(-4.371139e-08, 1, 0, 4.371139e-08, 1.9106855e-15, -1, -1, -4.371139e-08, -4.371139e-08, -4, 1.5232661, -1)
-mesh = SubResource("PlaneMesh_mmmqd")
-surface_material_override/0 = SubResource("StandardMaterial3D_5x2ve")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=137238672]
-transform = Transform3D(1, 0, 4.371139e-08, 4.371139e-08, 1.9106855e-15, -1, 0, 1, 1.9106855e-15, -1.8938782, 1.5232661, -2.452098)
 mesh = SubResource("PlaneMesh_mmmqd")
 surface_material_override/0 = SubResource("StandardMaterial3D_5x2ve")
 
@@ -369,5 +380,11 @@ mesh = SubResource("BoxMesh_5x2ve")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="SubViewportContainer/SubViewport/Control" unique_id=1061147694]
 libraries/ = SubResource("AnimationLibrary_nqpwy")
 autoplay = &"new_animation"
+
+[node name="conv_hall" parent="." unique_id=2131433735 instance=ExtResource("8_aofla")]
+transform = Transform3D(-2.1855694e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.1855694e-08, 0.6945149, 0.93507004, 2.2750714)
+
+[node name="ChCab" parent="." unique_id=1972925418 instance=ExtResource("9_nqpwy")]
+transform = Transform3D(0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, 4.214823, 1.4596522, -2.0210917)
 
 [editable path="Player"]

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://ddse0s0it746e"]
+
+[ext_resource type="PackedScene" uid="uid://cw12tke80ggs3" path="res://Model/Room/conv_hall.glb" id="1_ur0kn"]
+[ext_resource type="Texture2D" uid="uid://c6e37p3ys7prx" path="res://Model/Room/conv_hall_carpet1.png" id="2_tk3a1"]
+[ext_resource type="Texture2D" uid="uid://bktndb214on6s" path="res://Tex/wacade-arcade-floor-normal-map.png" id="3_fuyjd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oaet5"]
+albedo_texture = ExtResource("2_tk3a1")
+normal_enabled = true
+normal_texture = ExtResource("3_fuyjd")
+
+[node name="conv_hall" unique_id=2131433735 instance=ExtResource("1_ur0kn")]
+
+[node name="Cube" parent="." index="0" unique_id=273668146]
+surface_material_override/1 = SubResource("StandardMaterial3D_oaet5")

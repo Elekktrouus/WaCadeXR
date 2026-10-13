@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bhs2xwkgsw8w4"]
+
+[ext_resource type="Script" uid="uid://c7hk4xidedo8n" path="res://Scripts/CH/air_sensor.gd" id="1_kkgru"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mmmqd"]
+size = Vector3(12.820435, 0.6230469, 5.9732666)
+
+[node name="AirSensor" type="Area3D" unique_id=1279339533]
+script = ExtResource("1_kkgru")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=38304469]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25201416, -1.0693154, 0.48101807)
+shape = SubResource("BoxShape3D_mmmqd")
+debug_color = Color(0, 1, 1, 1)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

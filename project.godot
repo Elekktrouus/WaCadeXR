@@ -22,6 +22,8 @@ IPCManager="*uid://dfib30eepmg7c"
 GlobalSignal="*uid://5cd8qlg0llef"
 KeyManager="*uid://dfpnb4vjys3o4"
 CsvParser="*uid://bx8iunvirdv1v"
+UmiIo="*uid://cuvk8xwyterd5"
+UmiKbManager="*uid://dw1rac85qgnin"
 
 [display]
 

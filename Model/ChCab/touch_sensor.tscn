@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cn8r5enb2g4c2"]
+
+[ext_resource type="Script" uid="uid://qscctc72ghgm" path="res://Scripts/CH/touch_sensor.gd" id="1_s2dns"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5x2ve"]
+size = Vector3(238.11804, 162.703, 57.815918)
+
+[node name="TouchSensor" type="Area3D" unique_id=1956000465]
+script = ExtResource("1_s2dns")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=503820952]
+transform = Transform3D(0.9999999, -5.684342e-14, -3.5527137e-14, 5.684342e-14, 0.9999999, -7.073301e-15, 3.5527137e-14, 1.4424338e-12, 0.9999999, 0.81929016, 0.57958984, 21.092041)
+shape = SubResource("BoxShape3D_5x2ve")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

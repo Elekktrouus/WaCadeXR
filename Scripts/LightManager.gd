@@ -18,6 +18,8 @@ const LED_INTERVAL: float = 1.0 / 60.0
 
 var last_data: PackedByteArray = PackedByteArray()
 
+var breath_time: float = 0
+
 
 func _ready() -> void:
 	lights.clear()
@@ -53,8 +55,16 @@ func _process(delta: float) -> void:
 	is_ipc_idle = (data[3] == 0)
 	var fake_arr: Array[int]
 	
-	for i in range(1920):
-		fake_arr.append(randi_range(0, 255)) 
+	breath_time += delta
+		
+	
+	for i in range(480):
+		var col = lerp(Color(0,0,0), Color(0.608, 0.0, 0.682, 1.0), clampf(sin(breath_time*2), 0.0, 1.0))
+		
+		fake_arr.append(col.r8)
+		fake_arr.append(col.g8)
+		fake_arr.append(col.b8)
+		fake_arr.append(col.a8)
 	var fake_data: PackedByteArray = PackedByteArray(fake_arr)
 	if is_ipc_idle:
 		update_led(fake_data)

@@ -27,31 +27,9 @@ func _process(delta: float) -> void:
 func _physics_process(delta: float) -> void:
 	GlobalSignal.request_movement.emit(rhandphys, rhand.global_position)
 	GlobalSignal.request_movement.emit(lhandphys, lhand.global_position)
-	#fix_collision(rhandphys, rhandprev)
-	#fix_collision(lhandphys, lhandprev)
 	lhandprev = lhandphys.global_position
 	rhandprev = rhandphys.global_position
 	
-	
-	
-func fix_collision(node: Node3D, prevpos: Vector3) -> bool:
-	var testray = RayCast3D.new()
-	get_tree().current_scene.add_child(testray)
-	testray.global_position = node.global_position
-	testray.target_position = testray.to_local(prevpos)
-	testray.force_raycast_update()
-	var collider = testray.get_collider()
-	if collider != null and collider is StaticBody3D:
-		print("illegal collision detected, snapping pos")
-		node.global_position = prevpos
-		testray.queue_free()
-		return false
-	if collider != null: print(collider)
-	testray.queue_free()
-	return true
-	
-	
-
 func follow(body: RigidBody3D, target: Node3D, delta: float) -> void:
 	var pos_diff: Vector3 = target.global_position - body.global_position
 	
@@ -75,3 +53,16 @@ func follow(body: RigidBody3D, target: Node3D, delta: float) -> void:
 		body.angular_velocity = q_diff.get_axis().normalized() * (angle / delta)
 	else:
 		body.angular_velocity = Vector3.ZERO
+
+
+
+func _on_right_hand_input_vector_2_changed(action_name: String, value: Vector2) -> void:
+	print(action_name)
+	if action_name == "primary":
+		global_position.x += value.x/32
+		global_position.z += -value.y/32
+
+
+func _on_left_hand_input_vector_2_changed(action_name: String, value: Vector2) -> void:
+	if action_name == "primary":
+		rotation.y += -value.x/32

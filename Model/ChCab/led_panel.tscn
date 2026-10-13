@@ -1,0 +1,1126 @@
+[gd_scene format=3 uid="uid://bwgnlvpppgj1e"]
+
+[ext_resource type="Script" uid="uid://db3qbrkhu3lov" path="res://Model/ChCab/ch_led_manager.gd" id="1_rt1h8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qv26q"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_3wciy"]
+_surfaces = [{
+"aabb": AABB(-118.125, -82.265625, -0.10443115, 236.24976, 164.53125, 0.2088623),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_fn1mr"]
+resource_name = "led_panel_Body_002"
+_surfaces = [{
+"aabb": AABB(-118.125, -82.265625, -0.10443115, 236.24976, 164.53125, 0.2088623),
+"format": 34896613383,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_qv26q"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 248, 255, 0, 0, 0, 0, 0, 0, 248, 255, 255, 255, 0, 0, 255, 255, 248, 255, 0, 0, 255, 255, 0, 0, 248, 255, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_3wciy")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yn23o"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_vc2i5"]
+_surfaces = [{
+"aabb": AABB(-118.125, -82.265625, -0.10443115, 236.24976, 164.53125, 0.2088623),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_jw3fa"]
+resource_name = "led_panel_Body_003"
+_surfaces = [{
+"aabb": AABB(-118.125, -82.265625, -0.10443115, 236.24976, 164.53125, 0.2088623),
+"format": 34896613383,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_yn23o"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 248, 255, 0, 0, 0, 0, 0, 0, 248, 255, 255, 255, 0, 0, 255, 255, 248, 255, 0, 0, 255, 255, 0, 0, 248, 255, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_vc2i5")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cw4rv"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_cejek"]
+_surfaces = [{
+"aabb": AABB(-118.125, -82.265625, -0.10443115, 236.24976, 164.5315, 0.2088623),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_f4tq6"]
+resource_name = "led_panel_Body_004"
+_surfaces = [{
+"aabb": AABB(-118.125, -82.265625, -0.10443115, 236.24976, 164.5315, 0.2088623),
+"format": 34896613383,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_cw4rv"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 248, 255, 0, 0, 0, 0, 0, 0, 248, 255, 255, 255, 0, 0, 255, 255, 248, 255, 0, 0, 255, 255, 0, 0, 248, 255, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_cejek")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m3ffi"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_q1u7e"]
+_surfaces = [{
+"aabb": AABB(-118.125, -82.26538, -0.10443115, 236.24976, 164.531, 0.2088623),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_vw5nu"]
+resource_name = "led_panel_Body_005"
+_surfaces = [{
+"aabb": AABB(-118.125, -82.26538, -0.10443115, 236.24976, 164.531, 0.2088623),
+"format": 34896613383,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_m3ffi"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 248, 255, 0, 0, 0, 0, 0, 0, 248, 255, 255, 255, 0, 0, 255, 255, 248, 255, 0, 0, 255, 255, 0, 0, 248, 255, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_q1u7e")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i6p4k"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_v1lcu"]
+_surfaces = [{
+"aabb": AABB(-118.125, -82.265625, -0.10443115, 236.24976, 164.53125, 0.2088623),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_nkqjw"]
+resource_name = "led_panel_Body_006"
+_surfaces = [{
+"aabb": AABB(-118.125, -82.265625, -0.10443115, 236.24976, 164.53125, 0.2088623),
+"format": 34896613383,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_i6p4k"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 248, 255, 0, 0, 0, 0, 0, 0, 248, 255, 255, 255, 0, 0, 255, 255, 248, 255, 0, 0, 255, 255, 0, 0, 248, 255, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_v1lcu")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a1qp3"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_g8084"]
+_surfaces = [{
+"aabb": AABB(-118.125, -82.265625, -0.10443115, 236.24976, 164.53125, 0.2088623),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_yuq6n"]
+resource_name = "led_panel_Body_007"
+_surfaces = [{
+"aabb": AABB(-118.125, -82.265625, -0.10443115, 236.24976, 164.53125, 0.2088623),
+"format": 34896613383,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_a1qp3"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 248, 255, 0, 0, 0, 0, 0, 0, 248, 255, 255, 255, 0, 0, 255, 255, 248, 255, 0, 0, 255, 255, 0, 0, 248, 255, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_g8084")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xt1nc"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_10tvb"]
+_surfaces = [{
+"aabb": AABB(-118.125, -81.00122, -0.10443115, 236.24976, 162.00244, 0.2088623),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_idgb0"]
+resource_name = "led_panel_Body_008"
+_surfaces = [{
+"aabb": AABB(-118.125, -81.00122, -0.10443115, 236.24976, 162.00244, 0.2088623),
+"format": 34896613383,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_xt1nc"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 248, 255, 0, 0, 0, 0, 0, 0, 248, 255, 255, 255, 0, 0, 255, 255, 248, 255, 0, 0, 255, 255, 0, 0, 248, 255, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_10tvb")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_33ei0"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_bxhor"]
+_surfaces = [{
+"aabb": AABB(-118.125, -83.53015, -0.10443115, 236.24976, 167.06018, 0.2088623),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_0ovrc"]
+resource_name = "led_panel_Body_009"
+_surfaces = [{
+"aabb": AABB(-118.125, -83.53015, -0.10443115, 236.24976, 167.06018, 0.2088623),
+"format": 34896613383,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_33ei0"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 248, 255, 0, 0, 0, 0, 0, 0, 248, 255, 255, 255, 0, 0, 255, 255, 248, 255, 0, 0, 255, 255, 0, 0, 248, 255, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_bxhor")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w04c7"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_s7qrx"]
+_surfaces = [{
+"aabb": AABB(-118.125, -82.22681, -0.10443115, 236.24976, 164.45349, 0.2088623),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_34k6f"]
+resource_name = "led_panel_Body_010"
+_surfaces = [{
+"aabb": AABB(-118.125, -82.22681, -0.10443115, 236.24976, 164.45349, 0.2088623),
+"format": 34896613383,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_w04c7"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 248, 255, 0, 0, 0, 0, 0, 0, 248, 255, 255, 255, 0, 0, 255, 255, 248, 255, 0, 0, 255, 255, 0, 0, 248, 255, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_s7qrx")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bjnsx"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_x1o4h"]
+_surfaces = [{
+"aabb": AABB(-118.125, -82.304565, -0.10443115, 236.24976, 164.60901, 0.2088623),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ubqx8"]
+resource_name = "led_panel_Body_011"
+_surfaces = [{
+"aabb": AABB(-118.125, -82.304565, -0.10443115, 236.24976, 164.60901, 0.2088623),
+"format": 34896613383,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_bjnsx"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 248, 255, 0, 0, 0, 0, 0, 0, 248, 255, 255, 255, 0, 0, 255, 255, 248, 255, 0, 0, 255, 255, 0, 0, 248, 255, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_x1o4h")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h4bsv"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_4wmhw"]
+_surfaces = [{
+"aabb": AABB(-118.125, -82.265625, -0.10443115, 236.24976, 164.53125, 0.2088623),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_a1xrb"]
+resource_name = "led_panel_Body_012"
+_surfaces = [{
+"aabb": AABB(-118.125, -82.265625, -0.10443115, 236.24976, 164.53125, 0.2088623),
+"format": 34896613383,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_h4bsv"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 248, 255, 0, 0, 0, 0, 0, 0, 248, 255, 255, 255, 0, 0, 255, 255, 248, 255, 0, 0, 255, 255, 0, 0, 248, 255, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_4wmhw")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0uh68"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_bakdl"]
+_surfaces = [{
+"aabb": AABB(-118.125, -82.2655, -0.10443115, 236.24976, 164.53113, 0.2088623),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_xltcv"]
+resource_name = "led_panel_Body_013"
+_surfaces = [{
+"aabb": AABB(-118.125, -82.2655, -0.10443115, 236.24976, 164.53113, 0.2088623),
+"format": 34896613383,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_0uh68"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 248, 255, 0, 0, 0, 0, 0, 0, 248, 255, 255, 255, 0, 0, 255, 255, 248, 255, 0, 0, 255, 255, 0, 0, 248, 255, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_bakdl")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oraf5"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_73h5x"]
+_surfaces = [{
+"aabb": AABB(-118.125, -82.265625, -0.10443115, 236.24976, 164.53125, 0.2088623),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_2flsl"]
+resource_name = "led_panel_Body_014"
+_surfaces = [{
+"aabb": AABB(-118.125, -82.265625, -0.10443115, 236.24976, 164.53125, 0.2088623),
+"format": 34896613383,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_oraf5"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 248, 255, 0, 0, 0, 0, 0, 0, 248, 255, 255, 255, 0, 0, 255, 255, 248, 255, 0, 0, 255, 255, 0, 0, 248, 255, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_73h5x")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0ogu1"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_72woo"]
+_surfaces = [{
+"aabb": AABB(-118.125, -82.265625, -0.10443115, 236.24976, 164.53125, 0.2088623),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_annpa"]
+resource_name = "led_panel_Body_015"
+_surfaces = [{
+"aabb": AABB(-118.125, -82.265625, -0.10443115, 236.24976, 164.53125, 0.2088623),
+"format": 34896613383,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_0ogu1"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 248, 255, 0, 0, 0, 0, 0, 0, 248, 255, 255, 255, 0, 0, 255, 255, 248, 255, 0, 0, 255, 255, 0, 0, 248, 255, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_72woo")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f1k5e"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_d5xxc"]
+_surfaces = [{
+"aabb": AABB(-118.125, -82.265625, -0.10443115, 236.24976, 164.53137, 0.2088623),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_tjr2t"]
+resource_name = "led_panel_Body_016"
+_surfaces = [{
+"aabb": AABB(-118.125, -82.265625, -0.10443115, 236.24976, 164.53137, 0.2088623),
+"format": 34896613383,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_f1k5e"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 248, 255, 0, 0, 0, 0, 0, 0, 248, 255, 255, 255, 0, 0, 255, 255, 248, 255, 0, 0, 255, 255, 0, 0, 248, 255, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_d5xxc")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mkmgh"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_qscvj"]
+_surfaces = [{
+"aabb": AABB(-118.125, -82.265564, -0.10443115, 236.24976, 164.53119, 0.2088623),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_7tpg0"]
+resource_name = "led_panel_Body_017"
+_surfaces = [{
+"aabb": AABB(-118.125, -82.265564, -0.10443115, 236.24976, 164.53119, 0.2088623),
+"format": 34896613383,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_mkmgh"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 248, 255, 0, 0, 0, 0, 0, 0, 248, 255, 255, 255, 0, 0, 255, 255, 248, 255, 0, 0, 255, 255, 0, 0, 248, 255, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_qscvj")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lkmcj"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_or4ud"]
+_surfaces = [{
+"aabb": AABB(-118.125244, -82.265564, -0.10437012, 236.25024, 164.53119, 0.20874023),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_belmd"]
+resource_name = "led_panel_Body_018"
+_surfaces = [{
+"aabb": AABB(-118.125244, -82.265564, -0.10437012, 236.25024, 164.53119, 0.20874023),
+"format": 34896613383,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_lkmcj"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 248, 255, 0, 0, 0, 0, 0, 0, 248, 255, 255, 255, 0, 0, 255, 255, 248, 255, 0, 0, 255, 255, 0, 0, 248, 255, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_or4ud")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aw05c"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_6ix78"]
+_surfaces = [{
+"aabb": AABB(-118.125244, -82.265625, -0.10437012, 236.25024, 164.53137, 0.20874023),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_d3f20"]
+resource_name = "led_panel_Body_019"
+_surfaces = [{
+"aabb": AABB(-118.125244, -82.265625, -0.10437012, 236.25024, 164.53137, 0.20874023),
+"format": 34896613383,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_aw05c"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 248, 255, 0, 0, 0, 0, 0, 0, 248, 255, 255, 255, 0, 0, 255, 255, 248, 255, 0, 0, 255, 255, 0, 0, 248, 255, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_6ix78")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r5wuq"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_k2eyq"]
+_surfaces = [{
+"aabb": AABB(-118.125244, -82.265625, -0.10437012, 236.25024, 164.53125, 0.20874023),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_wcbiw"]
+resource_name = "led_panel_Body_020"
+_surfaces = [{
+"aabb": AABB(-118.125244, -82.265625, -0.10437012, 236.25024, 164.53125, 0.20874023),
+"format": 34896613383,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_r5wuq"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 248, 255, 0, 0, 0, 0, 0, 0, 248, 255, 255, 255, 0, 0, 255, 255, 248, 255, 0, 0, 255, 255, 0, 0, 248, 255, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_k2eyq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8ep5b"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_k0o1a"]
+_surfaces = [{
+"aabb": AABB(-118.125244, -82.265625, -0.10437012, 236.25024, 164.53125, 0.20874023),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_y7wy3"]
+resource_name = "led_panel_Body_021"
+_surfaces = [{
+"aabb": AABB(-118.125244, -82.265625, -0.10437012, 236.25024, 164.53125, 0.20874023),
+"format": 34896613383,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_8ep5b"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 248, 255, 0, 0, 0, 0, 0, 0, 248, 255, 255, 255, 0, 0, 255, 255, 248, 255, 0, 0, 255, 255, 0, 0, 248, 255, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_k0o1a")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fhp1n"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ubsim"]
+_surfaces = [{
+"aabb": AABB(-118.125244, -82.2655, -0.10437012, 236.25024, 164.53113, 0.20874023),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_r317r"]
+resource_name = "led_panel_Body_022"
+_surfaces = [{
+"aabb": AABB(-118.125244, -82.2655, -0.10437012, 236.25024, 164.53113, 0.20874023),
+"format": 34896613383,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_fhp1n"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 248, 255, 0, 0, 0, 0, 0, 0, 248, 255, 255, 255, 0, 0, 255, 255, 248, 255, 0, 0, 255, 255, 0, 0, 248, 255, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ubsim")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oksa8"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_k676d"]
+_surfaces = [{
+"aabb": AABB(-118.125244, -82.265625, -0.10437012, 236.25024, 164.53125, 0.20874023),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_vguo1"]
+resource_name = "led_panel_Body_023"
+_surfaces = [{
+"aabb": AABB(-118.125244, -82.265625, -0.10437012, 236.25024, 164.53125, 0.20874023),
+"format": 34896613383,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_oksa8"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 248, 255, 0, 0, 0, 0, 0, 0, 248, 255, 255, 255, 0, 0, 255, 255, 248, 255, 0, 0, 255, 255, 0, 0, 248, 255, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_k676d")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nu2bo"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_52ep6"]
+_surfaces = [{
+"aabb": AABB(-118.125244, -82.304565, -0.10437012, 236.25024, 164.60901, 0.20874023),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ykiok"]
+resource_name = "led_panel_Body_024"
+_surfaces = [{
+"aabb": AABB(-118.125244, -82.304565, -0.10437012, 236.25024, 164.60901, 0.20874023),
+"format": 34896613383,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_nu2bo"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 248, 255, 0, 0, 0, 0, 0, 0, 248, 255, 255, 255, 0, 0, 255, 255, 248, 255, 0, 0, 255, 255, 0, 0, 248, 255, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_52ep6")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_12xk2"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_a8gw4"]
+_surfaces = [{
+"aabb": AABB(-118.125244, -82.22681, -0.10437012, 236.25024, 164.45349, 0.20874023),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_4jlpr"]
+resource_name = "led_panel_Body_025"
+_surfaces = [{
+"aabb": AABB(-118.125244, -82.22681, -0.10437012, 236.25024, 164.45349, 0.20874023),
+"format": 34896613383,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_12xk2"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 248, 255, 0, 0, 0, 0, 0, 0, 248, 255, 255, 255, 0, 0, 255, 255, 248, 255, 0, 0, 255, 255, 0, 0, 248, 255, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_a8gw4")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pfawj"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_h7c1l"]
+_surfaces = [{
+"aabb": AABB(-118.125244, -83.53015, -0.10437012, 236.25024, 167.06018, 0.20874023),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_2akyk"]
+resource_name = "led_panel_Body_026"
+_surfaces = [{
+"aabb": AABB(-118.125244, -83.53015, -0.10437012, 236.25024, 167.06018, 0.20874023),
+"format": 34896613383,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_pfawj"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 248, 255, 0, 0, 0, 0, 0, 0, 248, 255, 255, 255, 0, 0, 255, 255, 248, 255, 0, 0, 255, 255, 0, 0, 248, 255, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_h7c1l")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ghhpn"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_largk"]
+_surfaces = [{
+"aabb": AABB(-118.125244, -81.00122, -0.10437012, 236.25024, 162.00244, 0.20874023),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_uxohh"]
+resource_name = "led_panel_Body_027"
+_surfaces = [{
+"aabb": AABB(-118.125244, -81.00122, -0.10437012, 236.25024, 162.00244, 0.20874023),
+"format": 34896613383,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_ghhpn"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 248, 255, 0, 0, 0, 0, 0, 0, 248, 255, 255, 255, 0, 0, 255, 255, 248, 255, 0, 0, 255, 255, 0, 0, 248, 255, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_largk")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ghkyx"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_db78a"]
+_surfaces = [{
+"aabb": AABB(-118.125244, -82.265625, -0.10437012, 236.25024, 164.53125, 0.20874023),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_wbtpj"]
+resource_name = "led_panel_Body_028"
+_surfaces = [{
+"aabb": AABB(-118.125244, -82.265625, -0.10437012, 236.25024, 164.53125, 0.20874023),
+"format": 34896613383,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_ghkyx"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 248, 255, 0, 0, 0, 0, 0, 0, 248, 255, 255, 255, 0, 0, 255, 255, 248, 255, 0, 0, 255, 255, 0, 0, 248, 255, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_db78a")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jw3cu"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_1f21x"]
+_surfaces = [{
+"aabb": AABB(-118.125244, -82.265625, -0.10437012, 236.25024, 164.53125, 0.20874023),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_b0xyy"]
+resource_name = "led_panel_Body_029"
+_surfaces = [{
+"aabb": AABB(-118.125244, -82.265625, -0.10437012, 236.25024, 164.53125, 0.20874023),
+"format": 34896613383,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_jw3cu"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 248, 255, 0, 0, 0, 0, 0, 0, 248, 255, 255, 255, 0, 0, 255, 255, 248, 255, 0, 0, 255, 255, 0, 0, 248, 255, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_1f21x")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ed1j3"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_kqv1p"]
+_surfaces = [{
+"aabb": AABB(-118.125244, -82.26538, -0.10437012, 236.25024, 164.531, 0.20874023),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_7atv4"]
+resource_name = "led_panel_Body_030"
+_surfaces = [{
+"aabb": AABB(-118.125244, -82.26538, -0.10437012, 236.25024, 164.531, 0.20874023),
+"format": 34896613383,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_ed1j3"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 248, 255, 0, 0, 0, 0, 0, 0, 248, 255, 255, 255, 0, 0, 255, 255, 248, 255, 0, 0, 255, 255, 0, 0, 248, 255, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_kqv1p")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1dswt"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_dgh5e"]
+_surfaces = [{
+"aabb": AABB(-118.125244, -82.265625, -0.10437012, 236.25024, 164.5315, 0.20874023),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_sqhat"]
+resource_name = "led_panel_Body_031"
+_surfaces = [{
+"aabb": AABB(-118.125244, -82.265625, -0.10437012, 236.25024, 164.5315, 0.20874023),
+"format": 34896613383,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_1dswt"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 248, 255, 0, 0, 0, 0, 0, 0, 248, 255, 255, 255, 0, 0, 255, 255, 248, 255, 0, 0, 255, 255, 0, 0, 248, 255, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_dgh5e")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_26kjw"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_k8vbv"]
+_surfaces = [{
+"aabb": AABB(-118.125244, -82.265625, -0.10437012, 236.25024, 164.53125, 0.20874023),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_8ng7q"]
+resource_name = "led_panel_Body_032"
+_surfaces = [{
+"aabb": AABB(-118.125244, -82.265625, -0.10437012, 236.25024, 164.53125, 0.20874023),
+"format": 34896613383,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_26kjw"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 248, 255, 0, 0, 0, 0, 0, 0, 248, 255, 255, 255, 0, 0, 255, 255, 248, 255, 0, 0, 255, 255, 0, 0, 248, 255, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_k8vbv")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ym5wp"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_6lu1g"]
+_surfaces = [{
+"aabb": AABB(-118.125244, -82.265625, -0.10437012, 236.25024, 164.53125, 0.20874023),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_pyd1j"]
+resource_name = "led_panel_Body_033"
+_surfaces = [{
+"aabb": AABB(-118.125244, -82.265625, -0.10437012, 236.25024, 164.53125, 0.20874023),
+"format": 34896613383,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_ym5wp"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 248, 255, 0, 0, 0, 0, 0, 0, 248, 255, 255, 255, 0, 0, 255, 255, 248, 255, 0, 0, 255, 255, 0, 0, 248, 255, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64, 3, 192, 10, 64)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_6lu1g")
+
+[node name="led_panel" type="Node3D" unique_id=207758102]
+script = ExtResource("1_rt1h8")
+
+[node name="Body_002" type="MeshInstance3D" parent="." unique_id=421244721]
+transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, -0.99624634, -0.035037518, 13.078013)
+mesh = SubResource("ArrayMesh_fn1mr")
+
+[node name="Body_003" type="MeshInstance3D" parent="." unique_id=822101879]
+transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, -0.99624634, -0.035037518, 11.432702)
+mesh = SubResource("ArrayMesh_jw3fa")
+
+[node name="Body_004" type="MeshInstance3D" parent="." unique_id=2036644285]
+transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, -0.99624634, -0.035037994, 9.787387)
+mesh = SubResource("ArrayMesh_f4tq6")
+
+[node name="Body_005" type="MeshInstance3D" parent="." unique_id=906295259]
+transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, -0.99624634, -0.035037994, 8.142074)
+mesh = SubResource("ArrayMesh_vw5nu")
+
+[node name="Body_006" type="MeshInstance3D" parent="." unique_id=1391147108]
+transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, -0.99624634, -0.035037994, 6.496764)
+mesh = SubResource("ArrayMesh_nkqjw")
+
+[node name="Body_007" type="MeshInstance3D" parent="." unique_id=534226670]
+transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, -0.99624634, -0.035037994, 4.851451)
+mesh = SubResource("ArrayMesh_yuq6n")
+
+[node name="Body_008" type="MeshInstance3D" parent="." unique_id=231348594]
+transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, -0.99624634, -0.03503847, 3.2187834)
+mesh = SubResource("ArrayMesh_idgb0")
+
+[node name="Body_009" type="MeshInstance3D" parent="." unique_id=1358467527]
+transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, -0.99624634, -0.03503847, 1.5734704)
+mesh = SubResource("ArrayMesh_0ovrc")
+
+[node name="Body_010" type="MeshInstance3D" parent="." unique_id=1358224610]
+transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, -0.99624634, -0.03503847, -0.08409792)
+mesh = SubResource("ArrayMesh_34k6f")
+
+[node name="Body_011" type="MeshInstance3D" parent="." unique_id=27727176]
+transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, -0.99624634, -0.03503847, -1.7294092)
+mesh = SubResource("ArrayMesh_ubqx8")
+
+[node name="Body_012" type="MeshInstance3D" parent="." unique_id=456363296]
+transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, -0.99624634, -0.035038948, -3.3751125)
+mesh = SubResource("ArrayMesh_a1xrb")
+
+[node name="Body_013" type="MeshInstance3D" parent="." unique_id=1267403345]
+transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, -0.99624634, -0.035038948, -5.020425)
+mesh = SubResource("ArrayMesh_xltcv")
+
+[node name="Body_014" type="MeshInstance3D" parent="." unique_id=63204257]
+transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, -0.99624634, -0.035038948, -6.665736)
+mesh = SubResource("ArrayMesh_2flsl")
+
+[node name="Body_015" type="MeshInstance3D" parent="." unique_id=1288205419]
+transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, -0.99624634, -0.035038948, -8.3110485)
+mesh = SubResource("ArrayMesh_annpa")
+
+[node name="Body_016" type="MeshInstance3D" parent="." unique_id=1374689066]
+transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, -0.99624634, -0.035039425, -9.956363)
+mesh = SubResource("ArrayMesh_tjr2t")
+
+[node name="Body_017" type="MeshInstance3D" parent="." unique_id=1768641649]
+transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, -0.99624634, -0.035039425, -11.601674)
+mesh = SubResource("ArrayMesh_7tpg0")
+
+[node name="Body_018" type="MeshInstance3D" parent="." unique_id=917230925]
+transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, 1.3662529, -0.037127495, -11.601674)
+mesh = SubResource("ArrayMesh_belmd")
+
+[node name="Body_019" type="MeshInstance3D" parent="." unique_id=1645229904]
+transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, 1.3662529, -0.037127495, -9.956363)
+mesh = SubResource("ArrayMesh_d3f20")
+
+[node name="Body_020" type="MeshInstance3D" parent="." unique_id=1957444683]
+transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, 1.3662529, -0.037127018, -8.3110485)
+mesh = SubResource("ArrayMesh_wcbiw")
+
+[node name="Body_021" type="MeshInstance3D" parent="." unique_id=491940643]
+transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, 1.3662529, -0.037127018, -6.665736)
+mesh = SubResource("ArrayMesh_y7wy3")
+
+[node name="Body_022" type="MeshInstance3D" parent="." unique_id=940120480]
+transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, 1.3662529, -0.037127018, -5.020425)
+mesh = SubResource("ArrayMesh_r317r")
+
+[node name="Body_023" type="MeshInstance3D" parent="." unique_id=494188694]
+transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, 1.3662529, -0.037127018, -3.3751125)
+mesh = SubResource("ArrayMesh_vguo1")
+
+[node name="Body_024" type="MeshInstance3D" parent="." unique_id=1602307202]
+transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, 1.3662529, -0.03712654, -1.7294092)
+mesh = SubResource("ArrayMesh_ykiok")
+
+[node name="Body_025" type="MeshInstance3D" parent="." unique_id=414141877]
+transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, 1.3662529, -0.03712654, -0.08409792)
+mesh = SubResource("ArrayMesh_4jlpr")
+
+[node name="Body_026" type="MeshInstance3D" parent="." unique_id=1625932580]
+transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, 1.3662529, -0.03712654, 1.5734701)
+mesh = SubResource("ArrayMesh_2akyk")
+
+[node name="Body_027" type="MeshInstance3D" parent="." unique_id=2000760694]
+transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, 1.3662529, -0.03712654, 3.2187834)
+mesh = SubResource("ArrayMesh_uxohh")
+
+[node name="Body_028" type="MeshInstance3D" parent="." unique_id=626470680]
+transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, 1.3662529, -0.037126064, 4.851451)
+mesh = SubResource("ArrayMesh_wbtpj")
+
+[node name="Body_029" type="MeshInstance3D" parent="." unique_id=1212055103]
+transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, 1.3662529, -0.037126064, 6.496764)
+mesh = SubResource("ArrayMesh_b0xyy")
+
+[node name="Body_030" type="MeshInstance3D" parent="." unique_id=1905645386]
+transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, 1.3662529, -0.037126064, 8.142074)
+mesh = SubResource("ArrayMesh_7atv4")
+
+[node name="Body_031" type="MeshInstance3D" parent="." unique_id=453173392]
+transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, 1.3662529, -0.037126064, 9.787387)
+mesh = SubResource("ArrayMesh_sqhat")
+
+[node name="Body_032" type="MeshInstance3D" parent="." unique_id=986422185]
+transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, 1.3662529, -0.037125587, 11.432702)
+mesh = SubResource("ArrayMesh_8ng7q")
+
+[node name="Body_033" type="MeshInstance3D" parent="." unique_id=727858926]
+transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, 1.3662529, -0.037125587, 13.078013)
+mesh = SubResource("ArrayMesh_pyd1j")

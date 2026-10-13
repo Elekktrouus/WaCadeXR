@@ -39,3 +39,6 @@ tracker = &"left_hand"
 [node name="MeshInstance3D" type="MeshInstance3D" parent="LeftHand" unique_id=1485686402]
 mesh = SubResource("SphereMesh_mmmqd")
 surface_material_override/0 = SubResource("StandardMaterial3D_d2qak")
+
+[connection signal="input_vector2_changed" from="RightHand" to="." method="_on_right_hand_input_vector_2_changed"]
+[connection signal="input_vector2_changed" from="LeftHand" to="." method="_on_left_hand_input_vector_2_changed"]

@@ -50,16 +50,17 @@ func correct_pos(pos: Vector3) -> Vector3:
 	var new_pos = space_start.to_local(pos)
 	var depth_norm = clampf(new_pos.z/ 0.251, 0.0, 1.0)
 	var dist_from_center = new_pos.distance_to(Vector3(0, 0, new_pos.z))+hand_radii
-	var max_radius = snapped(lerp(space_start_r, space_end_r, depth_norm), 0.01)
+	var max_radius = lerp(space_start_r, space_end_r, depth_norm)
 	depth_text.text = "Z: " + str(snapped(depth_norm, 0.01))
 	rad_text.text = "Radius: " + str(max_radius)
 	var test_vec = Vector2(new_pos.x, new_pos.y)
 	if dist_from_center > max_radius and depth_norm < 1.0 and dist_from_center < max_radius+1: #Ensure if you're far enough away, your hand gets freed
 		var new_vec = test_vec * (max_radius / dist_from_center)
-		var new_vec3 = space_start.to_global(Vector3(new_vec.x, new_vec.y, new_pos.z))
-		
+		var new_vec3 = space_start.to_global(Vector3(new_vec.x, new_vec.y, max(new_pos.z, hand_radii)))
 		return new_vec3 
-	return pos #if we dont need to snap, return the input pos
+	
+	var new_vec3 = space_start.to_global(Vector3(new_pos.x, new_pos.y, max(new_pos.z, hand_radii)))
+	return new_vec3 #if we dont need to snap, return the input pos
 	
 	
 func _on_request_movement(node: Node3D, pos: Vector3):

@@ -18,4 +18,3 @@ Additionally, I am not experienced in C# and mainly focus on GDScript.
 For that reason, much of the C# code has been taken from WACVR and modified with the assistance of Gen-AI or was written by Gen-AI.
 I'm going to be continuing on trying my best to understand the code that I'm writing (i am also concerned about AI turning my brain to mush :p) and hopefully we'll be able to build
 an open tool to play the game we all love together!!
-

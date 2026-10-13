@@ -15,7 +15,6 @@
 [ext_resource type="ArrayMesh" uid="uid://k8hywl7raaaa" path="res://Resource/ringcollider.tres" id="8_3pflq"]
 [ext_resource type="Script" uid="uid://dwc58anpatgs6" path="res://Scripts/HitboxManager.gd" id="8_jnvdn"]
 [ext_resource type="Texture2D" uid="uid://bktndb214on6s" path="res://Tex/wacade-arcade-floor-normal-map.png" id="12_3pflq"]
-[ext_resource type="Texture2D" uid="uid://b4sa47xvje6do" path="res://icon.svg" id="13_a7p14"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yg4dm"]
 resource_name = "WacVRCab"
@@ -112,8 +111,9 @@ normal_texture = ExtResource("5_qtbxt")
 transparency = 1
 albedo_color = Color(1, 1, 1, 0.34901962)
 albedo_texture = ExtResource("5_jnvdn")
-metallic_specular = 0.0
-roughness_texture = ExtResource("6_a7p14")
+metallic = 0.59
+metallic_specular = 1.0
+roughness = 0.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5x2ve"]
 albedo_color = Color(0.40934035, 0.40176407, 0.84799445, 1)
@@ -7948,7 +7948,7 @@ shader_parameter/roughness = 0.0
 shader_parameter/metallic_texture_channel = Vector4(0, 0, 0, 0)
 shader_parameter/specular = 0.0
 shader_parameter/metallic = 0.0
-shader_parameter/texture_emission = ExtResource("13_a7p14")
+shader_parameter/texture_emission = ExtResource("6_a7p14")
 shader_parameter/emission = Color(1, 1, 1, 1)
 shader_parameter/emission_energy = 4.99999988824
 shader_parameter/uv1_scale = Vector3(1, 1, 1)
